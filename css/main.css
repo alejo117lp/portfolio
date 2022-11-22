@@ -1,0 +1,20 @@
+header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-color:blue;
+}
+
+.menu_header{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+.img_logo{
+    width: 16px;
+}
