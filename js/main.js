@@ -1,23 +1,9 @@
-var toggles = document.querySelectorAll(".c-hamburger");
+window.onload = function () {
+  const menu_h = document.querySelector('.hamburger');
+  const mobile_menu = document.querySelector('.mobile_nav')
 
-for (var i = toggles.length - 1; i >= 0; i--) {
-  var toggle = toggles[i];
-  toggleHandler(toggle);
-};
-
-function toggleHandler(toggle) {
-  toggle.addEventListener("click", function(e) {
-    e.preventDefault();
-    if (this.classList.contains("is-active") === true) {
-      this.classList.remove("is-active");
-      $('.open').removeClass('oppenned');
-    } else {
-      this.classList.add("is-active");
-      $(".open").addClass('oppenned');
-    }
-  });
+  menu_h.addEventListener('click', function(){
+    menu_h.classList.toggle('is-active');
+    mobile_menu.classList.toggle('is-active');
+  })
 }
-$(".sub-menu li a").click(function(event) {
-  $(".open").removeClass('oppenned');
-  $(".c-hamburger").removeClass('is-active');
-});

@@ -13,6 +13,7 @@ header{
     height: 65px;
     left: 10%;
     display: flex;
+    z-index: 12;
     justify-content: space-between;
     background-color: aquamarine;
 }
@@ -25,6 +26,16 @@ header{
     left: 10%;
     background-color: blueviolet;
 }
+
+.prl_container::-webkit-scrollbar {
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }
+
+  body::-webkit-scrollbar{
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }
 
 .profile_picture_container{
     position: relative;
@@ -84,6 +95,71 @@ header{
     height: 8px;
     border-radius: 10px;
     background-color: cyan;
+}
+
+.hamburger{
+    position: relative;
+    display: block;
+    width: 50px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar_h, .hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active::before{
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active::after{
+    transform: rotate(45deg) translate(-8px, -9px);
+}
+ .hamburger.is-active .bar_h{
+    opacity: 0;
+ }
+
+ .mobile_nav{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 120px;
+    display: block;
+    z-index: 10;
+    background-color: rgba(100, 148, 237, 0.862);
+    transition: 0.4s;
+ }
+
+ .mobile_nav.is-active{
+    left: 0;
+ }
+
+ .mobile_nav a{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin:0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: burlywood;
+    color: black;
+    text-decoration: none;
+ }
+
+.mobile_nav a:hover{
+    background-color: azure;
 }
 
 /*Animations*/
