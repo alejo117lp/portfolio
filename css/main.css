@@ -1,5 +1,8 @@
+*{
+    box-sizing: border-box;
+}
 header{
-    position: absolute;
+    position: relative;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -7,10 +10,30 @@ header{
     background-color:blue;
 }
 
+footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(11, 20, 142);
+}
+
+body{
+    position: relative;
+    margin: 0;
+    background-color: black;
+    border: 0.1px solid red;
+    min-height: 100vh;
+    padding-bottom: 95px;
+}
+
+section{
+    position: relative;
+    padding: 0%;
+}
 .menu_header{
     position: relative;
     width: 80%;
-    height: 65px;
     left: 10%;
     display: flex;
     z-index: 12;
@@ -19,23 +42,12 @@ header{
 }
 
 .prl_container{
-    position: absolute;
+    position: relative;
+    margin: 0;
     width: 80%;
-    height: 100%;
-    top: 65px;
     left: 10%;
     background-color: blueviolet;
 }
-
-.prl_container::-webkit-scrollbar {
-    background: transparent; /* Chrome/Safari/Webkit */
-    width: 0px;
-  }
-
-  body::-webkit-scrollbar{
-    background: transparent; /* Chrome/Safari/Webkit */
-    width: 0px;
-  }
 
 .profile_picture_container{
     position: relative;
@@ -60,13 +72,18 @@ header{
 }
 
 .dad_box_skills{
-    position: absolute;
+    position:relative;
     width: 100%;
     min-width: 100px;
     background-color: cornflowerblue;
 }
 
+.skills{
+    position: relative;
+}
+
 .skills_container{
+    position:relative;
     width: 100%;
     padding-bottom: 40px;
     background: gray;
@@ -77,6 +94,7 @@ header{
 }
 
 .details_skills{
+    position:relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
