@@ -78,7 +78,7 @@ h3{
     margin: 5px 0;
 }
 
-span{
+span, li{
     font-family: 'Chillax-Regular';
     font-size: 18px;
     color: rgb(209, 209, 209);
