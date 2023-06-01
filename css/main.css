@@ -7,6 +7,7 @@ header{
     left: 0%;
     width: 100%;
     height: 65px;
+    background-color: #2b2b2b;
 }
 
 footer{
@@ -543,13 +544,66 @@ td{
 
 /*------------------------Media Quaries-----------------------------*/
 
-@media only screen and  (min-width: 320px) and (max-width: 540px){
-
+@media only screen and  (min-width: 320px) and (max-width: 899px){
+.desktop{
+    display: none;
 }
-@media only screen and (min-width: 541px) and (max-width: 1024px){ 
-
 }
-@media only screen and (min-width: 1025px){
+/*@media only screen and (min-width: 541px) and (max-width: 1024px){ 
+    .mobile{
+        display: none;
+    }
+}*/
+@media only screen and (min-width: 900px){
+
+    p{
+        font-size: 14px;
+    }
+    .mobile{
+        display: none;
+    }
+
+    header{
+        height: 70px;
+    }
+
+    .menu_header{
+        padding-top: 25px;
+    }
+
+    .myPersonalPresentation{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile_picture_container{
+        position: relative;
+        width: 35%;
+        top:20px;
+    }
+
+    .my_presentation{
+        position: relative;
+        width: 60%;
+    }
+
+    #profile_pic{
+        position: relative;
+        width: 300px;
+        height: 290px;
+        left: 50%;
+        margin-top: 25%;
+        margin-left: -150px;
+        border-radius: 30px;
+        border: 4px solid rgb(209, 209, 209);
+    }
+
+    .skills_container{
+        display: flex;
+        justify-content: space-between;
+    }
+
 
 }
 
