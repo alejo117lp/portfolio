@@ -74,12 +74,12 @@ h1{
 
 h3{
     font-family: 'Chillax-Medium';
-    font-size: 22px;
+    font-size: 20px;
     color: rgb(209, 209, 209); 
     margin: 5px 0;
 }
 
-span, li{
+span, li, .txt-thr{
     font-family: 'Chillax-Regular';
     font-size: 18px;
     color: rgb(209, 209, 209);
@@ -88,7 +88,7 @@ span, li{
 p{
     text-align: justify;
     font-family: 'Chillax-Regular';
-    font-size: 18px;
+    font-size: 15px;
     color: rgb(209, 209, 209);
 }
 
@@ -115,15 +115,10 @@ td{
     font-family: 'Chillax-Semibold';
 }
 
-.menu_header{
-    position: relative;
-    width: 80%;
-    left: 10%;
-    padding-top: 7px;
-    display: flex;
-    z-index: 12;
-    justify-content: space-between;
-    align-items: center;
+.desktop-menu{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 95px;
 }
 
 #img_logo{
@@ -192,45 +187,100 @@ td{
     color: rgb(209, 209, 209);
 }
 
+.TextHeader{
+    font-family: 'Chillax-Medium';
+    font-size: 18px;
+}
+
+.desktop-logo-conf{
+    position: relative;
+    max-width: 70px;
+}
+
 .my_presentation{
     position:relative;
     margin-top: 15px;
 }
 
-.dad_box_skills{
-    position:relative;
-    width: 100%;
-    min-width: 100px;
+.grid-skills{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 15px;
 }
 
-.skills{
-    position: relative;
-    padding: 0px 8px;
+
+.grid-projects{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 15px;
 }
 
-.skills_container h3{
-    padding: 8px 0px 8px 8px;
+.game-header{
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.game-picture-s{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px 0;
+
+}
+
+.game-details-button{
+    display: flex;
+    flex-direction: row-reverse;
+    /*align-items: flex-end;*/
+}
+
+
+
+.grid-projects-gp{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.game-header-gp{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.game-picture-s-gp{
+    grid-column: 1;
+    grid-row: 1/4;
+
+}
+
+.game-details-button > button{
+    font-family: 'Chillax-Semibold';
+    font-size: 20px;
+    width: 155px;
+    max-height: 60px;
+    border-radius: 5px;
+    background-color: rgb(70,172,240);
+    box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
+    -webkit-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
+    -moz-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
+    color: black;
+}
+
+.game-details-button > button:hover{
+    background-color: #A3660F;
+    color: rgb(215, 215, 215);
+    box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
+    -webkit-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
+    -moz-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
 }
 
 .skills_container{
-    position:relative;
-    width: 100%;
-    padding-bottom: 30px;
     border-radius: 5px;
     background: linear-gradient(0deg, rgba(55, 135, 189, 0.314) 0%, rgba(55, 135, 189, 0.464) 65%, rgba(55, 135, 189, 0.653) 100%);
 }
 
-.skills:not(:last-child){
-    margin-bottom: 15px;
+.skills_container > h3{
+    margin-left: 10px;
 }
 
-.details_skills{
-    position:relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
 
 .bar_menu{
     position: relative;
@@ -324,8 +374,7 @@ td{
 }
 
 .btns_game{
-    position: relative;
-    display: block;
+    padding: 0px 0px 0px 35px;
 }
 
 .btns_game a{
@@ -363,9 +412,9 @@ td{
 
 .sPoster{
     position: relative;
-    left: 0;
-    width: 95%;
+    width: 100%;
     height: 100%;
+    padding-right: 15px;
     border-radius: 8px;
 }
 
@@ -413,6 +462,11 @@ td{
     width: 100%;
 }
 
+.table-game-board{
+    position: relative;
+    width: 100%;
+}
+
 .btns_info_game{
     position: relative;
     display: flex;
@@ -446,6 +500,23 @@ td{
     position: relative;
     width: 100%;
     height: 300px;
+}
+
+.trailer-game{
+    display: flex;
+    padding-right: 70px;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
+.game-details-buttons-gp{
+    display: flex;
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
 }
 
 
@@ -544,20 +615,100 @@ td{
 
 /*------------------------Media Quaries-----------------------------*/
 
-@media only screen and  (min-width: 320px) and (max-width: 899px){
+@media only screen and  (min-width: 320px) and (max-width: 799px){
 .desktop{
     display: none;
 }
+.grid-skills{
+    grid-template-columns: 1fr;
+}
+
+.game-picture-s{
+    display: none;
+}
+
+
+.grid-projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.game-details-button{
+    display: flex;
+    /*flex-direction: row-reverse;*/
+    /*align-items: flex-end;*/
+}
+
+.game-details-button > button{
+    width: 100%;
+}
+
+.trailer-game{
+    display: none;
+}
+
+.menu_header{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    padding-top: 7px;
+    display: flex;
+    z-index: 12;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-projects-gp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+.game-header-gp {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.game-picture-s-gp {
+    grid-column: 1/3;
+    grid-row: 2;
+    /* padding: 20px 0; */
+}
+
+.game-description-text-gp{
+    grid-column: 1/3;
+    grid-row: 3;
+}
+
+.game-details-buttons-gp {
+    grid-column: 1/3;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.btns_game {
+    /* position: relative; */
+    /* display: flex; */
+    padding: 10px;
+}
+
+
 }
 /*@media only screen and (min-width: 541px) and (max-width: 1024px){ 
     .mobile{
         display: none;
     }
 }*/
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 800px){
 
     p{
-        font-size: 14px;
+        font-size: 18px;
     }
     .mobile{
         display: none;
@@ -568,9 +719,12 @@ td{
     }
 
     .menu_header{
-        padding-top: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
+   
     .myPersonalPresentation{
         position: relative;
         display: flex;
@@ -583,10 +737,6 @@ td{
         top:20px;
     }
 
-    .my_presentation{
-        position: relative;
-        width: 60%;
-    }
 
     #profile_pic{
         position: relative;
@@ -599,12 +749,44 @@ td{
         border: 4px solid rgb(209, 209, 209);
     }
 
-    .skills_container{
-        display: flex;
-        justify-content: space-between;
+    .poster_game{
+        display: none;
     }
 
+    .sPoster{
+        max-width: 300px;
+        max-height: 300px;
+    }
 
+    .game_box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .game-details-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .title{
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    
+    .game_presentation{
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .specifications-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 40px;
+    }
 }
 
 
