@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link id="hoja-estilos" rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
     <title>Alejo117lp - 2D Games</title>
 </head>
@@ -27,14 +27,21 @@
         </div>
 
         <div class="desktop-menu desktop">
-            <div class="desktop-logo">
-                <img  class="desktop-logo-conf" src="img/my_logoSS.png">
-            </div>
+            
             <div class="menu_header">
                 <a href="index.html" class="TextHeader">Home</a>
                 <a href="2d_games.html" class="TextHeader"><strong>2D Games</strong></a>
                 <a href="3d_games.html" class="TextHeader">3D Games </a>
                 <a href="vr_mob_games.html" class="TextHeader">VR & Mobile Games</a>
+            </div>
+
+            <div class="desktop-logos-conf">
+                <button id="botonCambiarTema">
+                    <img  class="desktop-logo-CT" src="img/cambiar-de-tema-50.png">
+                </button>
+                <button id="botonTraducir">
+                    <img  class="desktop-logo-CT" src="img/traductor-64.png">
+                </button>
             </div>
         </div>
     </header>
@@ -59,19 +66,33 @@
                 <img class="sPoster" src="img/Harmony_Sposter.png">
             </div>
             
-            <div class="game-description-text-gp">
+            <div class="game-description-text-gp ESP">
                  <p class="txt-thr">
                     Es un videojuego de plataformas desarrollado durante mi segundo semestre de universidad para el curso
                     "Métodos de Diseño". Allí, nos centramos en diseñar y desarollar un producto para un público específico,
                     aplicando los conocimientos básicos de programación en C# y design thinking.
                 </p>
             </div> 
+
+            <div class="game-description-text-gp ENG">
+                <p class="txt-thr">
+                    It is a platform video game developed during my second semester of university for the course
+                    "Design Methods". There, we focus on designing and developing a product for a specific audience,
+                    applying basic programming knowledge in C# and design thinking.
+               </p>
+           </div> 
             <div class="game-details-buttons-gp">
-                <div class="btns_game">
-                    <a class="download_btn" href="https://drive.google.com/file/d/154YNkBvCnpKq3wOV_85wxF8FcXYKlpxw/view?usp=sharing">Descargar</a>
+                <div class="btns_game ESP">
+                    <a class="download_btn ESP" href="https://drive.google.com/file/d/154YNkBvCnpKq3wOV_85wxF8FcXYKlpxw/view?usp=sharing">Descargar</a>
                 </div>
-                <div class="btns_game">
-                    <a href="harmony_Master.html">Ver Detalles</a>
+                <div class="btns_game ENG">
+                    <a class="download_btn ENG" href="https://drive.google.com/file/d/154YNkBvCnpKq3wOV_85wxF8FcXYKlpxw/view?usp=sharing">Download</a>
+                </div>
+                <div class="btns_game ESP">
+                    <a class="ESP" href="harmony_Master.html">Ver Detalles</a>
+                </div>
+                <div class="btns_game ENG">
+                    <a class="ENG" href="harmony_Master.html">View details</a>
                 </div>
             </div>
         </div>
@@ -87,18 +108,31 @@
             </div>
             
             <div class="game-description-text-gp">
-                 <p class="txt-thr">
+                 <p class="txt-thr ESP">
                         Es un juego desarrollado para el curso "simulación para sistemas interactivos", donde se 
                         aplica la matemática la física en la programación para generar los comportamientos deseados
                         en el juego, en este caso, atracción gravitacional.
                 </p>
+
+                <p class="txt-thr ENG">
+                    It is a game developed for the course "simulation for interactive systems", where
+                     applies mathematics and physics in programming to generate desired behaviors
+                     in the game, in this case, gravitational attraction.
+            </p>
             </div> 
             <div class="game-details-buttons-gp">
-                <div class="btns_game">
-                    <a class="download_btn" href="https://drive.google.com/file/d/1ECwIdUygT2Zv9ebf4vzjOqLBYXE2tqsx/view?usp=sharing">Descargar</a>
+                <div class="btns_game ESP">
+                    <a class="download_btn ESP" href="https://drive.google.com/file/d/1ECwIdUygT2Zv9ebf4vzjOqLBYXE2tqsx/view?usp=sharing">Descargar</a>
                 </div>
-                <div class="btns_game">
-                    <a href="the_last_jump.html">Ver Detalles</a>
+
+                <div class="btns_game ENG">
+                    <a class="download_btn ENG" href="https://drive.google.com/file/d/1ECwIdUygT2Zv9ebf4vzjOqLBYXE2tqsx/view?usp=sharing">Download</a>
+                </div>
+                <div class="btns_game ESP">
+                    <a class="ESP" href="the_last_jump.html">Ver Detalles</a>
+                </div>
+                <div class="btns_game ENG">
+                    <a class="ENG" href="the_last_jump.html">View Details</a>
                 </div>
             </div>
         </div>
@@ -106,7 +140,8 @@
          
     <footer>
         <div class="footer_container">
-            <h3>Contáctame:</h3>
+            <h3 class="ESP">Contáctame:</h3>
+            <h3 class="ENG">Contact me:</h3>
             <div class="info_footer">
                 <span> <img class="socialIcon" src="img/whatsapp_Icon.png" alt=""></span>
                 <span class="rTextinfo"><a href="https://wa.me/573222135827">Whatsapp: (+57) 3222135827</a></span>
@@ -122,6 +157,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

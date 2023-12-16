@@ -7,7 +7,7 @@ header{
     left: 0%;
     width: 100%;
     height: 65px;
-    background-color: #2b2b2b;
+    background-color: #3a0310;
 }
 
 .ESP{
@@ -18,18 +18,13 @@ header{
     display: none;
 }
 
-#prueba{
-    display: block;
-    color: aliceblue;
-}
-
 footer{
     position: absolute;
     padding: 15px;
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: rgb(42, 42, 42);
+    background-color: #aca7aa;
 }
 
 .footer_container{
@@ -47,6 +42,14 @@ footer{
     display: flex;
 }
 
+.info_footer a{
+    color: rgb(32, 32, 32);
+}
+
+.info_footer a:hover{
+    color: #86425f;
+}
+
 .rTextinfo{
     padding-left: 15px;
 }
@@ -59,7 +62,7 @@ footer{
 body{
     position: relative;
     margin: 0;
-    background: linear-gradient(180deg, rgba(7,7,7,1) 0%, rgb(49, 49, 49) 65%, rgb(98, 98, 98) 100%);
+    background: #FEF5E4;
     min-height: 100vh;
     padding-bottom: 270px;
 }
@@ -71,44 +74,44 @@ section{
 
 a{
     text-decoration: none;
-    color: rgb(209,209,209);
+    color: rgb(210, 210, 210);
 }
 
 a:hover{
-    color: rgb(55, 135, 189);
+    color: #eeba9d;
 }
 
 h1{
     text-align: center;
     font-family: 'Chillax-Semibold';
     font-size: 25px;
-    color: rgb(209, 209, 209);
+    color: #86425f;
 }
 
 h3{
     font-family: 'Chillax-Medium';
     font-size: 20px;
-    color: rgb(209, 209, 209); 
+    color: #86425f; 
     margin: 5px 0;
 }
 
 span, li, .txt-thr{
     font-family: 'Chillax-Regular';
     font-size: 18px;
-    color: rgb(209, 209, 209);
+    color: rgb(32, 32, 32);
 }
 
 p{
     text-align: justify;
     font-family: 'Chillax-Regular';
     font-size: 15px;
-    color: rgb(209, 209, 209);
+    color: rgb(32, 32, 32);
 }
 
 table {
     border-collapse: collapse;
     border-radius: 5px;
-    background: linear-gradient(0deg, rgba(55, 135, 189, 0.314) 0%, rgba(55, 135, 189, 0.464) 65%, rgba(55, 135, 189, 0.653) 100%);
+    background: linear-gradient(0deg, #eeba9d 0%, #b87f60  65%, #9b5028  100%);
 }
 
 th,td {
@@ -118,7 +121,7 @@ th,td {
 td{
     font-family: 'Chillax-Regular';
     font-size: 18px;
-    color: rgb(209, 209, 209);
+    color: rgb(32, 32, 32);
     text-align: start;
     padding: 8px;
 }
@@ -201,14 +204,14 @@ td{
     text-align: center;
     font-family: 'chillax-Bold';
     font-size: 21px;
-    color: rgb(209, 209, 209);
+    color: rgb(32, 32, 32);
 }
 
 .txt_two{
     text-align: center;
     font-family: 'Chillax-Medium';
     font-size: 17px;
-    color: rgb(209, 209, 209);
+    color: rgb(32, 32, 32);
 }
 
 .TextHeader{
@@ -281,24 +284,17 @@ td{
     width: 155px;
     max-height: 60px;
     border-radius: 5px;
-    background-color: rgb(70,172,240);
-    box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    -webkit-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    -moz-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    color: black;
+    background-color: #eeba9d;
 }
 
 .game-details-button > button:hover{
-    background-color: #A3660F;
-    color: rgb(215, 215, 215);
-    box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
-    -webkit-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
-    -moz-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
+    background-color: #86425f;
+    color: rgb(240, 240, 240);
 }
 
 .skills_container{
     border-radius: 5px;
-    background: linear-gradient(0deg, rgba(55, 135, 189, 0.314) 0%, rgba(55, 135, 189, 0.464) 65%, rgba(55, 135, 189, 0.653) 100%);
+    background: linear-gradient(0deg, #f29d6f 0%, #e2a17e  65%, #f5c5ab  100%);
 }
 
 .skills_container > h3{
@@ -410,19 +406,13 @@ td{
     text-align: center;
     padding: 15px;
     border-radius: 5px;
-    background-color: rgb(70,172,240);
-    box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    -webkit-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    -moz-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    color: black;
+    background-color: #eeba9d;
+    color: rgb(59, 59, 59);
 }
 
 .btns_game a:hover{
-    background-color: #A3660F;
-    color: rgb(215, 215, 215);
-    box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
-    -webkit-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
-    -moz-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
+    background-color: #86425f;
+    color: rgb(240, 240, 240);
 }
 
 .download_btn{
@@ -465,19 +455,13 @@ td{
     text-align: center;
     padding: 6px;
     border-radius: 5px;
-    background-color: rgb(70,172,240);
-    box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    -webkit-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    -moz-box-shadow: 0px 0px 12px 7px rgba(70,172,240,0.53);
-    color: rgb(35, 35, 35);
+    background-color: #eeba9d;
+    color: rgb(59, 59, 59);
 }
 
 .download_game a:hover{
-    background-color: #A3660F;
-    color: rgb(215, 215, 215);
-    box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
-    -webkit-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
-    -moz-box-shadow: 0px 0px 12px 7px rgba(163, 102, 15,0.53);
+    background-color: #86425f;
+    color: rgb(240, 240, 240);
 }
 
 .game_board{
