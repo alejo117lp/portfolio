@@ -1,13 +1,29 @@
 import './App.css';
-import './components/Header/Header';
-import Header from './components/Header/Header';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+  Navigate
+} from "react-router-dom";
+import Header from './components/header/Header';
+import TwoDGames from './components/2d_games/TwoDGames';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <p>Hola Mundo</p>
-    </div>
+    <>
+      <div className="App">
+        <Header />
+        <Router>
+          <Routes>
+            <Route path="/2d-games" element={<TwoDGames />} />
+          </Routes>
+        </Router>
+        <p>Hola Mundo</p>
+      </div>
+    </>
+    
   );
 }
 
