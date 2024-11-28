@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../header/Header.css';
 
 const Header = () => {
@@ -6,13 +7,13 @@ const Header = () => {
     <header className="header-container">
       <div className="header-items">
         <div className="home-item">
-          <a href="">Home</a>
+          <Link to="/home">Inicio</Link>
         </div>
         <div className="views-items">
-          <a href="">Front-End</a>
-          <a href="">Juegos 2D</a>
-          <a href="">Juegos 3D</a>
-          <a href="">Juegos VR y Mobile</a>
+          <Link to="/frontend-pj">Front-End</Link>
+          <Link to="/2d-games">Juegos 2D</Link>
+          <Link to="/3d-games">Juegos 3D</Link>
+          <Link to="/vr-mob-games">Juegos VR y Mobile</Link>
         </div>
       </div>
     </header>
