@@ -1,0 +1,21 @@
+.profile-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-head, .profile-description h3{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-description{
+	margin: 30px 0;
+}
+
+.profile-description h3{
+	margin: 15px 0;
+}

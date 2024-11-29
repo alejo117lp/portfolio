@@ -10,6 +10,7 @@ import ThreeDGames from './components/3d_games/ThreeDGames';
 import VrMobGames from  './components/vr_mob_games/VrMobGames';
 import Frontend from  './components/frontend/Frontend';
 import Home from './components/home/Home';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path='/frontend-pj' element={<Frontend />} />
             <Route path='/vr-mob-games' element={<VrMobGames />} />
           </Routes>
+        <Footer />
       </div>
     </Router>
   );
