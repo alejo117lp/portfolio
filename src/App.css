@@ -1,8 +1,39 @@
 body{
+  display: flex;
+  justify-content: center;
   color: #fff;
+  font-family: "Istok Web", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
   background-color: #121212;
 }
 
 .principal-container{
+  max-width: 1250px;
   margin: 5% 5% 0;
+}
+
+/* Textos */
+.featured{
+	font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.featured-2{
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style:normal;
+  justify-content: center;
+}
+
+.istok-italic{
+  font-style: italic;
+}
+
+.highlight{
+  color: #d1d1e9;
 }

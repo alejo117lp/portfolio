@@ -12,7 +12,7 @@ const Header = () => {
     <header className="header-container">
       <div className="header-items">
         <nav className="home-item">
-          <Link to="/home" className={isActive('/home') ? 'active-link' : ''}>
+          <Link to="/home" className={isActive('/home') || isActive('/') ? 'active-link' : ''}>
             Inicio
           </Link>
         </nav>

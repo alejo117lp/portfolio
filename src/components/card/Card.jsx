@@ -8,12 +8,14 @@ const Card = ( props ) => {
       <div className="card-head">
         <h5>{props.title}</h5>
       </div>
-      {props.items.map((item, index) => (
-        <div className="card-body" key={index}>
-          <i className={`icon-card ${(item.iconName)}`}></i>
-          <p>{item.description}</p>
-        </div>
-      ))}
+      <div className="card-body">
+        {props.items.map((item, index) => (
+          <div className="card-row" key={index}>
+            <i className={`icon-card ${(item.iconName)}`}></i>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 };

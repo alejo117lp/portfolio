@@ -19,3 +19,50 @@
 .profile-description h3{
 	margin: 15px 0;
 }
+
+.skills-cards{
+  display: flex;
+  margin: 15px 0;
+  justify-content: space-around;
+}
+
+.card-head{
+  display: flex;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 1px solid #d1d1e9;
+  justify-content: center;
+}
+
+.card-head h5{
+  margin: 0;
+  padding: 10px 3px;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.card-row p{
+  margin-bottom: 0;
+}
+
+.card-row i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container{
+  width: 18%;
+}
+
+.skills-section{
+  padding: 15px 0;
+  border-radius: 8px;
+  color: #D1D1E9 ;
+  background-color: #2e2e38;
+}

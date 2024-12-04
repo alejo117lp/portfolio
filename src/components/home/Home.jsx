@@ -6,6 +6,7 @@ import prueba2 from "../../img/Prueba2.jpg";
 import prueba3 from "../../img/Prueba3.jpg";
 import robotZ from "../../img/Robot-Z.png";
 import mib from "../../img/poster mib.jpeg";
+import logo from "../../img/logo_1.png";
 import GameCard from "../game_card/GameCard";
 
 const Home = () => {
@@ -38,21 +39,22 @@ const Home = () => {
   return (
     <div className="principal-container">
       <section className="profile-section">
+        <img src={logo} style={{maxWidth:'120px'}} alt="Logo Personal"></img>
         <div className="profile-head">
-          <h1>Alejandro López Pérez</h1>
-          <h4>
+          <h1 className="featured">Alejandro López Pérez</h1>
+          <h4 className="istok-italic">
             Ingeniero en Diseño de Entretenimiento Digital | Desarrollador
             Frontend y de Videojuegos
           </h4>
         </div>
         <div className="profile-description">
-          <h3>¿Quién soy?</h3>
+          <h3 className="featured-2">¿Quién soy?</h3>
           <p>
             Ingeniero en Diseño de Entretenimiento Digital con énfasis en
-            videojuegos y experiencia en desarrollo web frontend. He trabajado
+            videojuegos y experiencia en <span className="highlight">desarrollo web frontend.</span> He trabajado
             en proyectos utilizando React, JavaScript, Python, Django, Unity y
             tecnologías como Google AppScript y la API de WhatsApp Business. En
-            mi actual rol como Analista de Tecnología e Innovación, he sido
+            mi actual rol como <span className="highlight">Analista de Tecnología e Innovación</span>, he sido
             responsable del diseño y desarrollo de interfaces intuitivas y
             responsivas, además de la conexión eficiente entre frontend y
             backend. Cuento con un fuerte enfoque en mejorar procesos a través
@@ -66,7 +68,7 @@ const Home = () => {
 
       {/* Technical skills */}
       <section className="skills-section">
-        <h3>Habilidades Técnicas</h3>
+        <h3 className="featured-2">Habilidades Técnicas</h3>
         <div className="skills-cards">
           <Card title="Frontend" items={frontendItems} />
           <Card title="Backend" items={backendItems} />
@@ -77,10 +79,10 @@ const Home = () => {
 
       {/* Frontend Projects Carousel */}
       <section className="carousel-frontend-pj">
-        <h3>Proyectos Front-End</h3>
+        <h3 className="featured-2">Proyectos Front-End</h3>
         <div className="carousel-container">
           <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
+            <div className="carousel-indicators">
               <button
                 type="button"
                 data-bs-target="#carouselExampleDark"
@@ -102,19 +104,19 @@ const Home = () => {
                 aria-label="Slide 3"
               ></button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
+            <div className="carousel-inner">
+              <div className="carousel-item active" data-bs-interval="10000">
                 <img src={prueba1} class="d-block w-100" alt="prueba 1" />
-                <div class="carousel-caption d-none d-md-block">
+                <div className="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>
                     Some representative placeholder content for the first slide.
                   </p>
                 </div>
               </div>
-              <div class="carousel-item" data-bs-interval="2000">
+              <div className="carousel-item" data-bs-interval="2000">
                 <img src={prueba2} class="d-block w-100" alt="prueba 2" />
-                <div class="carousel-caption d-none d-md-block">
+                <div className="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>
                     Some representative placeholder content for the second
@@ -122,9 +124,9 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div className="carousel-item">
                 <img src={prueba3} class="d-block w-100" alt="prueba 3" />
-                <div class="carousel-caption d-none d-md-block">
+                <div className="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>
                     Some representative placeholder content for the third slide.
@@ -133,25 +135,25 @@ const Home = () => {
               </div>
             </div>
             <button
-              class="carousel-control-prev"
+              className="carousel-control-prev"
               type="button"
               data-bs-target="#carouselExampleDark"
               data-bs-slide="prev"
             >
               <span
-                class="carousel-control-prev-icon"
+                className="carousel-control-prev-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Previous</span>
+              <span className="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next"
+              className="carousel-control-next"
               type="button"
               data-bs-target="#carouselExampleDark"
               data-bs-slide="next"
             >
               <span
-                class="carousel-control-next-icon"
+                className="carousel-control-next-icon"
                 aria-hidden="true"
               ></span>
               <span class="visually-hidden">Next</span>
@@ -162,7 +164,7 @@ const Home = () => {
 
       {/* Proyectos Videojuegos */}
       <section className="p-games-pj">
-        <h3>Videojuegos Destacados</h3>
+        <h3 className="featured-2">Videojuegos Destacados</h3>
         <GameCard 
           title="Robot-z"
           src={robotZ}
