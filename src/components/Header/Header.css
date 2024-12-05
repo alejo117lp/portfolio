@@ -6,6 +6,7 @@ header a{
 .header-container{
   display: flex;
   height: 80px;
+  width: 100%;
   justify-content: center;
   color: #fff;
   background-color: #1b2a49;
@@ -13,7 +14,9 @@ header a{
 
 .header-items{
   display: flex;
-  width: 90%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 5%;
   justify-content: space-between;
   align-items: center;
 }

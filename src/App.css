@@ -1,6 +1,4 @@
 body{
-  display: flex;
-  justify-content: center;
   color: #fff;
   font-family: "Istok Web", serif;
   font-weight: 400;
@@ -9,8 +7,14 @@ body{
   background-color: #121212;
 }
 
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .principal-container{
-  max-width: 1250px;
+  max-width: 1200px;
   margin: 5% 5% 0;
 }
 
@@ -19,6 +23,7 @@ body{
 	font-family: "Protest Revolution", sans-serif;
   font-weight: bold;
   font-style: normal;
+  font-size: 4rem;
 }
 
 .featured-2{
@@ -35,5 +40,5 @@ body{
 }
 
 .highlight{
-  color: #d1d1e9;
+  color: #FFD54F;
 }

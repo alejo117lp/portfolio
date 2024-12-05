@@ -39,7 +39,6 @@ const Home = () => {
   return (
     <div className="principal-container">
       <section className="profile-section">
-        <img src={logo} style={{maxWidth:'120px'}} alt="Logo Personal"></img>
         <div className="profile-head">
           <h1 className="featured">Alejandro López Pérez</h1>
           <h4 className="istok-italic">
@@ -47,20 +46,21 @@ const Home = () => {
             Frontend y de Videojuegos
           </h4>
         </div>
+        <img src={logo} className="logo-presentation" alt="Logo Personal"></img>
         <div className="profile-description">
           <h3 className="featured-2">¿Quién soy?</h3>
           <p>
             Ingeniero en Diseño de Entretenimiento Digital con énfasis en
-            videojuegos y experiencia en <span className="highlight">desarrollo web frontend.</span> He trabajado
+            <span className="highlight"> videojuegos</span> y experiencia en <span className="highlight">desarrollo web frontend.</span> He trabajado
             en proyectos utilizando React, JavaScript, Python, Django, Unity y
             tecnologías como Google AppScript y la API de WhatsApp Business. En
             mi actual rol como <span className="highlight">Analista de Tecnología e Innovación</span>, he sido
-            responsable del diseño y desarrollo de interfaces intuitivas y
-            responsivas, además de la conexión eficiente entre frontend y
+            responsable del <span className="highlight">diseño y desarrollo de interfaces intuitivas y
+            responsivas</span>, además de la conexión eficiente entre frontend y
             backend. Cuento con un fuerte enfoque en mejorar procesos a través
             de herramientas colaborativas como Microsoft 365 y soluciones
             innovadoras en software. Asimismo, me gusta combinar mis habilidades
-            técnicas con la docencia en áreas como Introducción al Desarrollo
+            técnicas con la <span className="highlight">docencia</span> en áreas como Introducción al Desarrollo
             Web o Desarrollo Frontend y afines en mis ratos libres.
           </p>
         </div>
@@ -81,13 +81,13 @@ const Home = () => {
       <section className="carousel-frontend-pj">
         <h3 className="featured-2">Proyectos Front-End</h3>
         <div className="carousel-container">
-          <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div id="carouselExampleDark" className="carousel carousel-dark slide">
             <div className="carousel-indicators">
               <button
                 type="button"
                 data-bs-target="#carouselExampleDark"
                 data-bs-slide-to="0"
-                class="active"
+                className="active"
                 aria-current="true"
                 aria-label="Slide 1"
               ></button>
@@ -106,7 +106,7 @@ const Home = () => {
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active" data-bs-interval="10000">
-                <img src={prueba1} class="d-block w-100" alt="prueba 1" />
+                <img src={prueba1} className="d-block w-100" alt="prueba 1" />
                 <div className="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>
@@ -115,7 +115,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="carousel-item" data-bs-interval="2000">
-                <img src={prueba2} class="d-block w-100" alt="prueba 2" />
+                <img src={prueba2} className="d-block w-100" alt="prueba 2" />
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>
@@ -125,7 +125,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="carousel-item">
-                <img src={prueba3} class="d-block w-100" alt="prueba 3" />
+                <img src={prueba3} className="d-block w-100" alt="prueba 3" />
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>
@@ -156,7 +156,7 @@ const Home = () => {
                 className="carousel-control-next-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Next</span>
+              <span className="visually-hidden">Next</span>
             </button>
           </div>
         </div>
