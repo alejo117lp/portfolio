@@ -4,7 +4,7 @@ footer{
   padding: 20px 0;
   justify-content: center;
   background-color: #121212; 
-  border-top: 3px solid #00E676; 
+  border-top: 3px solid #0078FF; 
 }
 
 .footer-container{
@@ -32,15 +32,15 @@ footer{
 }
 
 .footer-item:hover{
-  color: #00E676;
+  color: #FFC107;
 }
 
 .footer-item a:hover{
-  color: #00E676;
+  color: #FFC107;
   text-decoration-thickness: 2px;
-  text-decoration-color: #00E676;
+  text-decoration-color: #FFC107;
   border-radius: 5px;
-  text-shadow: 0 0 15px rgba(0, 230, 118, 0.9)
+  text-shadow: 0 0 15px rgba(255, 193, 7, 0.9);
 }
 
 .credits{
