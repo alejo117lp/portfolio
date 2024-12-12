@@ -74,3 +74,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<!-- Others notes -->
+<!-- <div className="carousel-container">
+    <div className="wrapper">
+        <div className="card card1" style={{backgroundImage:`url(${img1})`}}><p>Portal Empleados</p></div>
+        <div className="card card2" style={{backgroundImage:`url(${img2})`}}></div>
+        <div className="card card3" style={{backgroundImage:`url(${img3})`}}></div>
+    </div>
+</div> -->

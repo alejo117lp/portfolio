@@ -2,7 +2,10 @@ import React from "react";
 
 const TwoDGames = () => {
   return(
-    <h4>2D GAMES</h4>
+    <div className="principal-container">
+      <h4>2D GAMES</h4>
+    </div>
+    
   )  
 };
 

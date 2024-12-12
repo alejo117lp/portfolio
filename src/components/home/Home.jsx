@@ -1,13 +1,14 @@
 import React from "react";
 import "../home/home.css";
 import Card from "../card/Card";
-import prueba1 from "../../img/Prueba1.jpg";
-import prueba2 from "../../img/Prueba2.jpg";
-import prueba3 from "../../img/Prueba3.jpg";
+import img1 from "../../img/Prueba1.jpg";
+import img2 from "../../img/App-Asistencias.png";
+import img3 from "../../img/User-Login-Contrataciones.png";
 import robotZ from "../../img/Robot-Z.png";
 import mib from "../../img/poster mib.jpeg";
 import logo from "../../img/logo_1.png";
 import GameCard from "../game_card/GameCard";
+import ProjectCard from "../project_card/ProjectCard";
 
 const Home = () => {
   const frontendItems = [
@@ -39,19 +40,21 @@ const Home = () => {
   return (
     <div className="principal-container">
       <section className="profile-section">
-        <div className="profile-head">
-          <h1 className="featured">Alejandro López Pérez</h1>
-          <h4 className="istok-italic">
-            Ingeniero en Diseño de Entretenimiento Digital | Desarrollador
-            Frontend y de Videojuegos
-          </h4>
+        <div className="name-icon">
+          <img src={logo} className="logo-presentation" alt="Logo Personal"></img>
+          <div className="profile-head">
+            <h1 className="featured">Alejandro López Pérez</h1>
+            <h4 className="istok-italic">
+              Desarrollador Frontend y de Videojuegos
+            </h4>
+          </div>
         </div>
-        <img src={logo} className="logo-presentation" alt="Logo Personal"></img>
+        
         <div className="profile-description">
           <h3 className="featured-2">¿Quién soy?</h3>
           <p>
             Ingeniero en Diseño de Entretenimiento Digital con énfasis en
-            <span className="highlight"> videojuegos</span> y experiencia en <span className="highlight">desarrollo web frontend.</span> He trabajado
+            <span className="highlight"> videojuegos</span>, experiencia en <span className="highlight">desarrollo web frontend</span> y nivel<span className="highlight"> B1 en inglés</span>. He trabajado
             en proyectos utilizando React, JavaScript, Python, Django, Unity y
             tecnologías como Google AppScript y la API de WhatsApp Business. En
             mi actual rol como <span className="highlight">Analista de Tecnología e Innovación</span>, he sido
@@ -79,94 +82,22 @@ const Home = () => {
 
       {/* Frontend Projects Carousel */}
       <section className="carousel-frontend-pj">
-        <h3 className="featured-2">Proyectos Front-End</h3>
-        <div className="carousel-container">
-          <div id="carouselExampleDark" className="carousel carousel-dark slide">
-            <div className="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleDark"
-                data-bs-slide-to="0"
-                className="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleDark"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleDark"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div className="carousel-inner">
-              <div className="carousel-item active" data-bs-interval="10000">
-                <img src={prueba1} className="d-block w-100" alt="prueba 1" />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
-                </div>
-              </div>
-              <div className="carousel-item" data-bs-interval="2000">
-                <img src={prueba2} className="d-block w-100" alt="prueba 2" />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>
-                    Some representative placeholder content for the second
-                    slide.
-                  </p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={prueba3} className="d-block w-100" alt="prueba 3" />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>
-                    Some representative placeholder content for the third slide.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
+        <h3 className="featured-2">Proyectos Front-End Destacados</h3>
+        <ProjectCard 
+          title="Portal de Empleados"
+          src={img1}
+          alt="Portal empleados"
+          description="Aplicación Web desarrollada en React para reemplazar la antigua intranet de la empresa. Allí
+          los empleados pueden gestionar su información personal, consultar colillas de pago, firmas documentos digitales, gestionar 
+          sus turnos de trabajo, vacaciones entre otros."
+        />
       </section>
 
       {/* Proyectos Videojuegos */}
       <section className="p-games-pj">
         <h3 className="featured-2">Videojuegos Destacados</h3>
         <GameCard 
-          title="Robot-z"
+          title="Robot-Z"
           src={robotZ}
           alt="robot-Z poster"
           description="Es un stealth, puzzle and fast game desarrollado durante mi tercer semestre de académico para el curso de Fundamentos de Programación. Allí diseñé el nivel con todas sus zonas de trampas y power-ups, el concept de los personajes y la historia. También, implementé las mecánicas (Caminar, Saltar, Agacharse, activar palancas, desactivar trampas, recolectar items), el nivel y cada uno de sus assets, el menú de inicio y pausa; las animaciones y las pantallas de Ganar y Perder."

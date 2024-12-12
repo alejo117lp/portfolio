@@ -13,9 +13,13 @@
 	justify-content: center;
 }
 
+.name-icon{
+  display: flex;
+  gap: 15px;
+}
+
 .logo-presentation{
-  margin: 40px 0 10px 0;
-  max-width: 150px;
+  max-width: 190px;
 }
 
 .profile-description{
@@ -41,6 +45,18 @@
   justify-content: center;
 }
 
+.skills-cards .card-container {
+  background-color: #1C1C1C; /* Fondo gris oscuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-cards .card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+
 .card-head h5{
   margin: 0;
   padding: 10px 3px;
@@ -65,20 +81,66 @@
 
 .card-container{
   width: 18%;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
 .skills-section{
   margin: 40px 0;
   padding: 30px 0;
-  border-radius: 8px;
+  border-radius: 10px;
   color: #D1D1E9;
   background-color: #2e2e38;
 }
 
 /* CARUSEL SECTION */
 
+.wrapper{
+  display: flex;
+  width: 600px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card{
+  flex: 1;
+  transition: flex 0.5s ease;
+  cursor: pointer;
+}
+
+.card p{
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.card:hover{
+  flex: 10;
+}
+
+.card-row:hover {
+  color: #FFC107;
+}
+
+.card1, .card2, .card3, .card4{
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.5s ease-in-out;
+}
+
 .carousel-frontend-pj{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 50px 0;
+}
+
+.card1:hover{
+  background-image: url('../../img/Prueba2.jpg') !important;
 }
 
 .carousel-container{
