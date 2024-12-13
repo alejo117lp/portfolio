@@ -35,6 +35,7 @@ p{
 
 /* Textos */
 .featured{
+  text-align: center;
   font-size: 3rem;
 	font-family: "Poppins", sans-serif;
   font-weight: bold;

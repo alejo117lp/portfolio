@@ -2,8 +2,6 @@ import React from "react";
 import "../home/home.css";
 import Card from "../card/Card";
 import img1 from "../../img/Prueba1.jpg";
-import img2 from "../../img/App-Asistencias.png";
-import img3 from "../../img/User-Login-Contrataciones.png";
 import robotZ from "../../img/Robot-Z.png";
 import mib from "../../img/poster mib.jpeg";
 import logo from "../../img/logo_1.png";
@@ -62,9 +60,7 @@ const Home = () => {
             responsivas</span>, además de la conexión eficiente entre frontend y
             backend. Cuento con un fuerte enfoque en mejorar procesos a través
             de herramientas colaborativas como Microsoft 365 y soluciones
-            innovadoras en software. Asimismo, me gusta combinar mis habilidades
-            técnicas con la <span className="highlight">docencia</span> en áreas como Introducción al Desarrollo
-            Web o Desarrollo Frontend y afines en mis ratos libres.
+            innovadoras en software.
           </p>
         </div>
       </section>

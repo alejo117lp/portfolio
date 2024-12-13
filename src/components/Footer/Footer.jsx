@@ -5,36 +5,34 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <h3>Contáctame:</h3>
+        <h4>Contáctame:</h4>
         <div className="contact-box">
+          
           <div className="footer-item">
-            <i className="fa-brands fa-whatsapp"></i>
             <a
               href="https://wa.me/573222135827"
               target="_blank"
               rel="noreferrer"
             >
-              Whatsapp: (+57) 3222135827
+              <i className="fa-brands fa-whatsapp"></i>
             </a>
           </div>
           <div className="footer-item">
-            <i className="fa-solid fa-envelope"></i>
             <a
               href="mailto:alejo197lp@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              Email: alejo197lp@gmail.com
+              <i className="fa-solid fa-envelope"></i>
             </a>
           </div>
           <div className="footer-item">
-            <i className="fa-brands fa-linkedin"></i>
             <a
               href="https://www.linkedin.com/in/alejolopezp?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noreferrer"
             >
-              Linkedin: alejolopezp
+              <i className="fa-brands fa-linkedin"></i>
             </a>
           </div>
         </div>

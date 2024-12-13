@@ -14,7 +14,14 @@ footer{
   padding: 10px 0;
 }
 
+.footer-container h4{
+  text-align: center;
+}
+
 .contact-box{
+  display: flex;
+  justify-content: center;
+  gap: 45px;
   margin:20px 0;
 }
 
@@ -29,6 +36,10 @@ footer{
   padding:5px;
   text-decoration: none;
   transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-item i{
+  font-size: 50px;
 }
 
 .footer-item:hover{
