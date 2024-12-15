@@ -33,6 +33,7 @@ const Home = () => {
     { iconName: "fa-brands fa-google", description: "Google Apps Script" },
     { iconName: "fa-brands fa-microsoft", description: "Microsoft 365" },
     { iconName: "fa-brands fa-figma", description: "Figma" },
+    { iconName: "fa-solid fa-globe", description: "Odoo" },
   ];
 
   return (
