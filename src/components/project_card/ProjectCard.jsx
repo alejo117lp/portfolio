@@ -5,7 +5,7 @@ import '../game_card/gameCard.css';
 const ProjectCard = ( props ) => {
   return(
     <div className="game-card-container">
-      <h4>{props.title}</h4>
+      <h4><strong>{props.title}</strong></h4>
       <img src={props.src} alt={props.alt} />
       <p>{props.description}</p>
       <div className="game-btns-container">

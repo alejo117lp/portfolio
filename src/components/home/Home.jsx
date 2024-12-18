@@ -1,7 +1,7 @@
 import React from "react";
 import "../home/home.css";
 import Card from "../card/Card";
-import img1 from "../../img/Prueba1.jpg";
+import img1 from "../../img/web_fua_intranet.jpg";
 import robotZ from "../../img/Robot-Z.png";
 import mib from "../../img/poster mib.jpeg";
 import logo from "../../img/logo_1.png";
@@ -84,9 +84,13 @@ const Home = () => {
           title="Portal de Empleados"
           src={img1}
           alt="Portal empleados"
-          description="Aplicación Web desarrollada en React para reemplazar la antigua intranet de la empresa. Allí
-          los empleados pueden gestionar su información personal, consultar colillas de pago, firmas documentos digitales, gestionar 
-          sus turnos de trabajo, vacaciones entre otros."
+          description={
+            <p>
+              Aplicación Web con conexión al ERP y desarrollada en <span className="highlight">React</span> para reemplazar la antigua intranet de la empresa. Allí
+              los empleados pueden gestionar su información personal, consultar colillas de pago, firmar documentos digitales, gestionar 
+              sus turnos de trabajo, vacaciones entre otros.
+            </p>
+          }
         />
       </section>
 
