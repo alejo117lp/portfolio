@@ -11,6 +11,13 @@ import VrMobGames from  './pages/VrMobGames/VrMobGames';
 import Frontend from  './pages/Frontend/Frontend';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
+import DeliveryJourney from './pages/Games/DeliveryJourney';
+import HarmonyMaster from './pages/Games/HarmonyMaster';
+import MenInBlackMuseum from './pages/Games/MenInBlackMuseum';
+import RobotZ from './pages/Games/RobotZ';
+import TankWar from './pages/Games/TankWar';
+import TheLastJump from './pages/Games/TheLastJump';
+import ThisIsNotAChildhood from './pages/Games/ThisIsNotAChildhood';
 
 
 function App() {
@@ -26,6 +33,7 @@ function App() {
             <Route path='/3d-games' element={<ThreeDGames />} />
             <Route path='/frontend-pj' element={<Frontend />} />
             <Route path='/vr-mob-games' element={<VrMobGames />} />
+            <Route path='/delivery-journey' element={<DeliveryJourney />} />
           </Routes>
         <Footer />
       </div>
