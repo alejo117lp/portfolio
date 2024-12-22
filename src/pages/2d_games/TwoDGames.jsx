@@ -1,5 +1,5 @@
 import React from "react";
-import GameCard from "../game_card/GameCard";
+import GameCard from "../../components/GameCard/GameCard"
 import Harmony from "../../img/Hamony_1.png";
 import TLJ from "../../img/TLU_1.png";
 

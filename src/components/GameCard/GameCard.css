@@ -14,6 +14,8 @@
 .game-card-container h4{
   grid-column: 1/3;
   grid-row: 1;
+  color:#FFC107;
+  font-weight: bold;
 }
 
 .game-card-container:hover {

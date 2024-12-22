@@ -1,5 +1,5 @@
 import React from "react";
-import GameCard from "../game_card/GameCard";
+import GameCard from "../../components/GameCard/GameCard";
 import RobotZ from '../../img/Robot-Z.png';
 import TINAC from '../../img/TINAC_1.png';
 import TANK from '../..//img/Tank_war_1.png';

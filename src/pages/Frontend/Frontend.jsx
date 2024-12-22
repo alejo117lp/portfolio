@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../project_card/ProjectCard";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import img1 from "../../img/web_fua_intranet.jpg";
 import img2 from "../../img/web_fua_asistencias.jpg";
 import img3 from "../../img/web_fua_contratos.png";

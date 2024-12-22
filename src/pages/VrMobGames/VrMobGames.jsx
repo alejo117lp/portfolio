@@ -1,5 +1,5 @@
 import React from "react";
-import GameCard from "../game_card/GameCard";
+import GameCard from "../../components/GameCard/GameCard"
 import Delivery from '../../img/Delivery_1.png';
 import MIB from '../../img/MIB_1.png';
 

@@ -1,12 +1,12 @@
 import React from "react";
-import "../home/home.css";
-import Card from "../card/Card";
+import "./Home.css";
+import Card from "../../components/Card/Card";
 import img1 from "../../img/web_fua_intranet.jpg";
 import robotZ from "../../img/Robot-Z.png";
 import mib from "../../img/poster mib.jpeg";
 import logo from "../../img/logo_1.png";
-import GameCard from "../game_card/GameCard";
-import ProjectCard from "../project_card/ProjectCard";
+import GameCard from "../../components/GameCard/GameCard";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 const Home = () => {
   const frontendItems = [

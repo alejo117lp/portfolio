@@ -5,11 +5,11 @@ import {
   Routes,
 } from "react-router-dom";
 import Header from './components/Header/Header';
-import TwoDGames from './components/2d_games/TwoDGames';
-import ThreeDGames from './components/3d_games/ThreeDGames';
-import VrMobGames from  './components/vr_mob_games/VrMobGames';
-import Frontend from  './components/frontend/Frontend';
-import Home from './components/home/Home';
+import TwoDGames from './pages/2d_games/TwoDGames';
+import ThreeDGames from './pages/3d_games/ThreeDGames';
+import VrMobGames from  './pages/VrMobGames/VrMobGames';
+import Frontend from  './pages/Frontend/Frontend';
+import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
 
 
