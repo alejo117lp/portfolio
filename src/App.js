@@ -34,6 +34,12 @@ function App() {
             <Route path='/frontend-pj' element={<Frontend />} />
             <Route path='/vr-mob-games' element={<VrMobGames />} />
             <Route path='/delivery-journey' element={<DeliveryJourney />} />
+            <Route path='/harmony-master' element={<HarmonyMaster />} />
+            <Route path='/mib-museum' element={<MenInBlackMuseum />} />
+            <Route path='/robot-z' element={<RobotZ />} />
+            <Route path='/tank-war' element={<TankWar />} />
+            <Route path='/the-last-jump' element={<TheLastJump />} />
+            <Route path='/tinac' element={<ThisIsNotAChildhood />} />
           </Routes>
         <Footer />
       </div>

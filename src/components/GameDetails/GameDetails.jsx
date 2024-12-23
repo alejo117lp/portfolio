@@ -2,7 +2,12 @@ import React from "react";
 
 const GameDetails = (props) => {
   return(
-    <h4>Game Details Component</h4>
+    <div className="principal-container">
+      <h1>{props.name}</h1>
+      <section className="game-summary">
+        <p>{props.description}</p>
+      </section>
+    </div>
   )
 };
 
