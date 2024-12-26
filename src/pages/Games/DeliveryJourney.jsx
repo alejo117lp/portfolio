@@ -1,8 +1,18 @@
 import React from "react";
+import GameDetails from "../../components/GameDetails/GameDetails";
 
 const DeliveryJourney = () => {
   return(
-    <h4>DeliveryJourney</h4>
+    <GameDetails 
+      name='Delivery Journey'
+      videoLink ='https://www.youtube.com/embed/9BaDQfRzFEk?si=thYmUPcwfSI2OGcp'
+      downloadLink = 'https://drive.google.com/file/d/1JyK5kubGs8Tu-MeuVVUDfxx5AxqlFruK/view?usp=sharing'
+      description={
+        <p>
+          A short Description about Somenthing
+        </p>
+      }
+    />
   )
 };
 

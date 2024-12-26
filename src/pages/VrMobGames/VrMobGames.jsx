@@ -22,7 +22,7 @@ const VrMobGames = () => {
             </p>
           }
           link="https://drive.google.com/file/d/1JyK5kubGs8Tu-MeuVVUDfxx5AxqlFruK/view?usp=sharing"
-          navigate="/home"
+          navigate="/delivery-journey"
         />
 
         <GameCard 
@@ -38,7 +38,7 @@ const VrMobGames = () => {
             </p>
           }
           link="https://drive.google.com/file/d/1SjxuAWR8I0vBd9r7wPLB32b3EIlZEiJo/view?usp=sharing"
-          navigate="/home"
+          navigate="/mib-museum"
         />
       </section>
     </div>

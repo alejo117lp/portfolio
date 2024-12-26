@@ -21,7 +21,7 @@ const TwoDGames = () => {
             Este juego fue realizado durante mi segundo período académico para el curso de "Métodos de Diseño".
           </p>}
           link="https://drive.google.com/file/d/154YNkBvCnpKq3wOV_85wxF8FcXYKlpxw/view?usp=sharing"
-          navigate="/home"
+          navigate="/harmony-master"
         />
 
         <GameCard 
@@ -36,7 +36,7 @@ const TwoDGames = () => {
             </p>
           }
           link="https://drive.google.com/file/d/1ECwIdUygT2Zv9ebf4vzjOqLBYXE2tqsx/view?usp=sharing"
-          navigate="/home"
+          navigate="/the-last-jump"
         />
       </section>
     </div>

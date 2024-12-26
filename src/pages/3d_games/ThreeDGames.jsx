@@ -24,7 +24,7 @@ const ThreeDGames = () => {
             </p>
           }
           link="https://drive.google.com/file/d/1kAZzVENQbICYlaLtGg_XJgrYg0E3jd_w/view"
-          navigate="/home"
+          navigate="/robot-z"
         />
 
         <GameCard 
@@ -39,7 +39,7 @@ const ThreeDGames = () => {
             </p>
           }
           link="https://drive.google.com/file/d/1qsvZAj2MY4K6YFRcDaGPXPBrVflUJ_83/view?usp=sharing"
-          navigate="/home"
+          navigate="/tinac"
         />
 
         <GameCard 
@@ -54,7 +54,7 @@ const ThreeDGames = () => {
             </p>
           }
           link="https://drive.google.com/file/d/11Bk7QM78CwUIsgPWl5YAXjvgiKksYFk6/view?usp=sharing"
-          navigate="/home"
+          navigate="/tank-war"
         />
       </section>
     </div>

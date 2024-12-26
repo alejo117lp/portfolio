@@ -9,7 +9,7 @@ const ProjectCard = ( props ) => {
       <img src={props.src} alt={props.alt} />
       <p>{props.description}</p>
       <div className="game-btns-container">
-        <Link to={props.navigate}>Ver Detalles</Link>
+        <Link className="btn-a" to={props.navigate}>Ver Detalles</Link>
       </div>
     </div>
   )
