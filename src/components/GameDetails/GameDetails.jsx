@@ -1,4 +1,5 @@
 import React from "react";
+import '../GameDetails/GameDetails.css';
 
 const GameDetails = (props) => {
   return(
@@ -6,6 +7,7 @@ const GameDetails = (props) => {
       <h1 className="featured">{props.name}</h1>
       <section className="game-summary">
         <iframe 
+          className="game-trailer"
           width="560" 
           height="315" 
           src={props.videoLink} 
@@ -15,8 +17,10 @@ const GameDetails = (props) => {
           referrerpolicy="strict-origin-when-cross-origin" 
           allowfullscreen>
         </iframe>
-        <p>{props.description}</p>
-        <a href={props.downloadLink} className="btn-a" target="_blank" rel="noreferrer">Descargar</a>
+        <div className="right-zone">
+          <p>{props.description}</p>
+          <a href={props.downloadLink} className="btn-a" target="_blank" rel="noreferrer">Descargar</a>
+        </div>
       </section>
       <section className="game-features">
 

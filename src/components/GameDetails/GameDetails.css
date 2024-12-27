@@ -1,0 +1,19 @@
+.game-summary{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.right-zone{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: space-between;
+}
+
+.right-zone a{
+    align-self: center;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
