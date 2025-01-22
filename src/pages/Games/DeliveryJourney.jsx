@@ -1,5 +1,6 @@
 import React from "react";
 import GameDetails from "../../components/GameDetails/GameDetails";
+import poster from "../../img/Delivery_1.png"
 
 const DeliveryJourney = () => {
   return(
@@ -14,6 +15,11 @@ const DeliveryJourney = () => {
           Sabes lo que hay en las viejas y deplorables carreteras de este maligno país , sin embargo, tienes que demostrar que eres habilidoso a la hora de conducir para poder escapar de las fosas del mal.
         </p>
       }
+      platforms="Android"
+      genre="Endless Runner"
+      status="Beta"
+      poster={poster}
+      tasks={["Diseño de Juego", "Narrativa"]}
     />
   )
 };

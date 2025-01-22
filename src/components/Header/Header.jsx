@@ -17,7 +17,7 @@ const Header = () => {
           </Link>
         </nav>
         <nav className="views-items">
-          <Link to="/frontend-pj" className={isActive('/frontend-pj') ? 'active-link' : ''}>Front-End</Link>
+          <Link to="/frontend-pj" className={isActive('/frontend-pj') ? 'active-link' : ''}>Frontend</Link>
           <Link to="/2d-games" className={isActive('/2d-games') ? 'active-link' : ''}>Juegos 2D</Link>
           <Link to="/3d-games" className={isActive('/3d-games') ? 'active-link' : ''}>Juegos 3D</Link>
           <Link to="/vr-mob-games" className={isActive('/vr-mob-games') ? 'active-link' : ''}>Juegos VR y Mobile</Link>

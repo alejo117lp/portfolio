@@ -24,11 +24,19 @@ const GameDetails = (props) => {
       </section>
 
       <section className="game-features">
-        <div className="game-states">
-          <p><strong>Plataformas: </strong></p> {props.platforms}
-          <p><strong>Género: </strong></p> {props.genre}
-          <p><strong>Tags: </strong></p> {props.tags}
-          <p><strong>Estado: </strong></p> {props.status}
+        <div className="game-feature-items">
+          <div className="game-feature-item">
+            <p><strong>Plataformas: </strong></p> 
+            <p>{props.platforms}</p>
+          </div>
+          <div className="game-feature-item">
+            <p><strong>Género: </strong></p> 
+            <p>{props.genre}</p>
+          </div>
+          <div className="game-feature-item">
+            <p><strong>Estado: </strong></p>
+            <p>{props.status}</p>
+          </div>   
         </div>
         <div className="game-poster">
           <img src={props.poster} alt="Poster del producto" />
@@ -37,12 +45,30 @@ const GameDetails = (props) => {
 
       <section className="task-table">
         <h3 className="feature-2">Tareas Desarrolladas:</h3>
-        
+        {props.tasks && props.tasks.length > 0 ? (
+          <table className="table">
+            <thead>
+      <tr>
+        <th>#</th>
+        <th>Tarea</th>
+      </tr>
+    </thead>
+            <tbody>
+              {props.tasks.map((task, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td> {/* Enumerar automáticamente */}
+                  <td>{task}</td> {/* Mostrar el string de la tarea */}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p>No hay tareas disponibles.</p> // Mensaje cuando no hay tareas
+        )}
       </section>
 
       <section className="gallery-section">
         <h3 className="feature-2">Galería</h3>
-
       </section>
     </div>
   )
