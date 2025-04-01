@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e4c76288.css",
-    "main.js": "/portfolio/static/js/main.824abce1.js",
+    "main.css": "/portfolio/static/css/main.308196c3.css",
+    "main.js": "/portfolio/static/js/main.ed5f3a04.js",
+    "static/media/TINAC_1.png": "/portfolio/static/media/TINAC_1.e919ef5250fa956bcc77.png",
+    "static/media/MIB_1.png": "/portfolio/static/media/MIB_1.391db4302c89a32e112b.png",
+    "static/media/Delivery_1.png": "/portfolio/static/media/Delivery_1.5587bc719ba77d5a1aaf.png",
     "static/media/Robot-Z.png": "/portfolio/static/media/Robot-Z.f592266999e3f63dc10d.png",
+    "static/media/Hamony_1.png": "/portfolio/static/media/Hamony_1.25a97bcec0b38d569fd5.png",
+    "static/media/Tank_war_1.png": "/portfolio/static/media/Tank_war_1.21829f0c5acd1da35d41.png",
+    "static/media/web_fua_contratos.png": "/portfolio/static/media/web_fua_contratos.ae036cb03a7225ca4c79.png",
     "static/media/poster mib.jpeg": "/portfolio/static/media/poster mib.04864845631cc8d46e6b.jpeg",
+    "static/media/TLU_1.png": "/portfolio/static/media/TLU_1.f982d222fb9efc25d9e1.png",
     "static/media/logo_1.png": "/portfolio/static/media/logo_1.080c1177ab69cb879a8a.png",
+    "static/media/web_fua_intranet.jpg": "/portfolio/static/media/web_fua_intranet.b25f48e033de3af41105.jpg",
+    "static/media/web_fua_asistencias.jpg": "/portfolio/static/media/web_fua_asistencias.8457f4a0a98f07639904.jpg",
     "index.html": "/portfolio/index.html",
-    "main.e4c76288.css.map": "/portfolio/static/css/main.e4c76288.css.map",
-    "main.824abce1.js.map": "/portfolio/static/js/main.824abce1.js.map"
+    "main.308196c3.css.map": "/portfolio/static/css/main.308196c3.css.map",
+    "main.ed5f3a04.js.map": "/portfolio/static/js/main.ed5f3a04.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4c76288.css",
-    "static/js/main.824abce1.js"
+    "static/css/main.308196c3.css",
+    "static/js/main.ed5f3a04.js"
   ]
 }
