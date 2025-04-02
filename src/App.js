@@ -18,6 +18,7 @@ import RobotZ from './pages/Games/RobotZ';
 import TankWar from './pages/Games/TankWar';
 import TheLastJump from './pages/Games/TheLastJump';
 import ThisIsNotAChildhood from './pages/Games/ThisIsNotAChildhood';
+import PortalEmpleados from './pages/PortalEmpleados/PortalEmpleados';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path='/tank-war' element={<TankWar />} />
             <Route path='/the-last-jump' element={<TheLastJump />} />
             <Route path='/tinac' element={<ThisIsNotAChildhood />} />
+            <Route path='/portal-empleados' element={<PortalEmpleados />} />
           </Routes>
         <Footer />
       </div>

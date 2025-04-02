@@ -1,0 +1,23 @@
+.grid-projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap: 40px;
+    margin: 25px 0 15px;
+}
+
+.gpc-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.gpc-item:hover{
+    color: #dacc2d;
+}
+
+.gpc-item img{
+    border-radius: 8px;
+}
