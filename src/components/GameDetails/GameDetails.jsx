@@ -1,7 +1,8 @@
 import React from "react";
 import '../GameDetails/GameDetails.css';
+import Carousel from "../Carousel/Carousel";
 
-const GameDetails = (props) => {
+const GameDetails = ( props ) => {
   return(
     <div className="principal-container">
       <h1 className="featured mt-4">{props.name}</h1>
@@ -69,6 +70,7 @@ const GameDetails = (props) => {
 
       <section className="gallery-section">
         <h3 className="feature-2">Galería</h3>
+        <Carousel images={props.images} /> {/* Cambia 'images' por la propiedad correcta que contiene las imágenes */}
       </section>
     </div>
   )

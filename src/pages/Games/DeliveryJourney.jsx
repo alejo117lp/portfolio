@@ -1,6 +1,8 @@
 import React from "react";
 import GameDetails from "../../components/GameDetails/GameDetails";
-import poster from "../../img/Delivery_1.png"
+import poster from "../../img/Delivery_1.png";
+import img1 from "../../img//Prueba1.jpg";
+import img2 from "../../img//Prueba2.jpg";
 
 const DeliveryJourney = () => {
   return(
@@ -20,6 +22,10 @@ const DeliveryJourney = () => {
       status="Beta"
       poster={poster}
       tasks={["Diseño de Juego", "Narrativa"]}
+      images={[
+        { src: img1, alt: "Vista 1 del Portal de Empleados" },
+        { src: img2, alt: "Vista 2 del Portal de Empleados" },
+      ]}
     />
   )
 };
