@@ -1,5 +1,6 @@
 import React from "react";
 import "./FrontendDetails.css";
+import TaskTable from "../TaskTable/TaskTable";
 
 const FrontendDetails = (props) => {
   return (
@@ -48,6 +49,13 @@ const FrontendDetails = (props) => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
+      <TaskTable
+        tasks={props.tasks}
+        title="Caracteristicas:"
+        header1="N°"
+        header2="Descripción"
+      />
     </section>
   );
 };

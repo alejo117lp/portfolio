@@ -22,6 +22,15 @@ const PortalEmpleados = () => {
           { src: img1, alt: "Vista 1 del Portal de Empleados" },
           { src: img2, alt: "Vista 2 del Portal de Empleados" },
         ]}
+
+        tasks={[
+          "Diseño de la interfaz de usuario en Figma.",
+          "Desarrollo del frontend utilizando React.",
+          "Implementación de un formulario para la actualización de datos personales.",
+          "Integración de funcionalidades para la consulta de colillas de pago y generación de certificados laborales.",
+          "Desarrollo de un sistema de firma electrónica para documentos internos.",
+          "Optimización del portal para dispositivos móviles y tablets."
+        ]}
       />
 
     </div>
