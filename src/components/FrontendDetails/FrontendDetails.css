@@ -28,6 +28,10 @@
     Contenedor interno para centrar la imagen vertical y horizontalmente 
     sin sobrescribir el display de .carousel-item 
   */
+
+  .info-container h2{
+    text-align: center;
+  }
   .carousel-item-content {
     display: flex;
     align-items: center;

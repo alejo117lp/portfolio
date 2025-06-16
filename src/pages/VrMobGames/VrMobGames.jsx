@@ -1,7 +1,7 @@
 import React from "react";
 import GameCard from "../../components/GameCard/GameCard"
-import Delivery from '../../img/Delivery_1.png';
-import MIB from '../../img/MIB_1.png';
+import Delivery from '../../assets/img/Delivery_1.png';
+import MIB from '../../assets/img/MIB_1.png';
 
 const VrMobGames = () => {
 	return(

@@ -1,8 +1,8 @@
 import React from "react";
 import GameCard from "../../components/GameCard/GameCard";
-import RobotZ from '../../img/Robot-Z.png';
-import TINAC from '../../img/TINAC_1.png';
-import TANK from '../..//img/Tank_war_1.png';
+import RobotZ from '../../assets/img/Robot-Z.png';
+import TINAC from '../../assets/img/TINAC_1.png';
+import TANK from '../../assets/img/Tank_war_1.png';
 
 const ThreeDGames = () => {
 	return(

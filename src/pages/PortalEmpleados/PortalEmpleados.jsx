@@ -1,8 +1,8 @@
 import React from "react";
 import '../../pages/PortalEmpleados/PortalEmpleados.css';
 import FrontendDetails from "../../components/FrontendDetails/FrontendDetails";
-import img1 from "../../img/web_fua_intranet.jpg";
-import img2 from "../../img/Hamony_1.png";
+import img1 from "../../assets/img/web_fua_intranet.jpg";
+import img2 from "../../assets/img/Hamony_1.png";
 
 const PortalEmpleados = () => {
   return (

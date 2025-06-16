@@ -5,7 +5,7 @@ const FrontendDetails = (props) => {
   return (
     <section className="frontend-details mt-4">
       <div className="info-container">
-        <h2>{props.title}</h2>
+        <h2 className="featured">{props.title}</h2>
         <p>{props.description}</p>
       </div>
 

@@ -1,9 +1,9 @@
 import React from "react";
 import '../../pages/Frontend/Frontend.css';
 import { Link } from "react-router-dom";
-import img1 from "../../img/web_fua_intranet.jpg";
-import img2 from "../../img/web_fua_asistencias.jpg";
-import img3 from "../../img/web_fua_contratos.png";
+import img1 from "../../assets/img/web_fua_intranet.jpg";
+import img2 from "../../assets/img/web_fua_asistencias.jpg";
+import img3 from "../../assets/img/web_fua_contratos.png";
 
 const Frontend = () => {
 	return(
