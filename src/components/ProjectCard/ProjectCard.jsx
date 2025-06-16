@@ -7,7 +7,7 @@ const ProjectCard = ( props ) => {
     <div className="game-card-container">
       <h4>{props.title}</h4>
       <img src={props.src} alt={props.alt} />
-      <p>{props.description}</p>
+      {props.description}
       <div className="game-btns-container">
         <Link className="btn-a" to={props.navigate}>Ver Detalles</Link>
       </div>

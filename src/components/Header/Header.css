@@ -32,6 +32,7 @@ header a{
 .views-items, .home-item{
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .header-container .header-items a{
@@ -55,4 +56,72 @@ header a{
   border-radius: 5px 25px;
   text-shadow: 0 0 5px rgba(255, 193, 7, 0.6);
   /* background-color: #2E4057; */
+}
+
+/* Botón hamburguesa oculto en desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #ffc107;
+  cursor: pointer;
+}
+
+/* Agrupa logo + menú hamburguesa */
+.home-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Botón hamburguesa (inicialmente oculto) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #ffc107;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .header-items {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .home-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .views-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0f1d35; /* fondo menú móvil */
+    padding: 10px 20px;
+    border-top: 2px solid #0078FF;
+  }
+
+  .views-items.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-container .header-items nav a {
+    padding: 10px 0;
+    width: 100%;
+  }
 }

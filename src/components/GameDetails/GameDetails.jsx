@@ -51,9 +51,6 @@ const GameDetails = (props) => {
             </p>
           </div>
         </div>
-        <div className="game-poster">
-          <img src={props.poster} alt="Poster del producto" />
-        </div>
       </section>
 
       <TaskTable
@@ -64,7 +61,6 @@ const GameDetails = (props) => {
       />
 
       <section className="gallery-section">
-        <h3 className="feature-2">Galería</h3>
         <Carousel images={props.images} />{" "}
       </section>
     </div>

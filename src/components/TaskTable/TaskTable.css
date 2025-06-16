@@ -1,7 +1,7 @@
 /* Contenedor general de la tabla */
 .task-table {
     margin: 40px auto; /* Centrar vertical y horizontalmente */
-    width: 90%;
+    width: 100%;
     max-width: 1200px; /* Limitar ancho máximo */
     background-color: #1C1C1C; /* Fondo oscuro para la tabla */
     border-radius: 8px; /* Bordes redondeados */
@@ -26,6 +26,10 @@
     background-color: #2E2E38; /* Fondo para filas alternas */
     border-radius: 8px; /* Bordes redondeados de las celdas */
     overflow: hidden; /* Asegurar que los bordes redondeados se apliquen */
+  }
+
+  .task-table .table>thead {
+    text-align: center;
   }
   
   /* Encabezado de la tabla */
