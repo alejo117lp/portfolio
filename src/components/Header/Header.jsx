@@ -19,7 +19,8 @@ const Header = () => {
               to="/home"
               className={isActive("/home") || isActive("/") ? "active-link" : ""}
             >
-              Inicio
+              <i className="fa-solid fa-house mobile"></i>
+              <span className="desktop">Inicio</span>
             </Link>
           </nav>
 
