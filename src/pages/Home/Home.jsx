@@ -78,7 +78,7 @@ const Home = () => {
       </section>
 
       {/* Frontend Projects Carousel */}
-      <section className="carousel-frontend-pj">
+      <section className="web-projects-section">
         <h3 className="featured-2">Proyectos Front-End Destacados</h3>
         <ProjectCard 
           title="Portal de Empleados"
