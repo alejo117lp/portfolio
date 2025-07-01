@@ -44,3 +44,48 @@
   gap:15px;
   justify-content: flex-end;
 }
+
+/*******************************************************/
+/* ------MEDIAQUEARIES ------*/
+/*******************************************************/
+
+/*******************************************************/
+/* ------MOBILE ------*/
+/*******************************************************/
+
+@media (width <= 767px) {
+  .game-card-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .game-card-container h4 {
+    text-align: center;
+    grid-column: unset;
+  }
+
+  .game-card-container  p{
+    text-align: justify;
+  }
+
+  .game-btns-container {
+    grid-column: unset;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center
+  }
+}
+
+/*******************************************************/
+/* ------TABLET ------*/
+/*******************************************************/
+
+@media (width >= 768px) and (width <= 991px) {
+    
+}
+/*******************************************************/
+/* ------LAPTOP ------*/
+/*******************************************************/
+@media (width >= 992px) and (width <= 1199px) {
+    
+}

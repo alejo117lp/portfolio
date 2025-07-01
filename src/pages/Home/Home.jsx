@@ -101,7 +101,8 @@ const Home = () => {
           title="Robot-Z"
           src={robotZ}
           alt="robot-Z poster"
-          description="Es un stealth, puzzle and fast game desarrollado durante mi tercer semestre de académico para el curso de Fundamentos de Programación. Allí diseñé el nivel con todas sus zonas de trampas y power-ups, el concept de los personajes y la historia. También, implementé las mecánicas (Caminar, Saltar, Agacharse, activar palancas, desactivar trampas, recolectar items), el nivel y cada uno de sus assets, el menú de inicio y pausa; las animaciones y las pantallas de Ganar y Perder."
+          description=
+          {<p>Es un stealth, puzzle and fast game desarrollado durante mi tercer semestre de académico para el curso de Fundamentos de Programación. Allí diseñé el nivel con todas sus zonas de trampas y power-ups, el concept de los personajes y la historia. También, implementé las mecánicas (Caminar, Saltar, Agacharse, activar palancas, desactivar trampas, recolectar items), el nivel y cada uno de sus assets, el menú de inicio y pausa; las animaciones y las pantallas de Ganar y Perder.</p>}
           link="https://drive.google.com/file/d/1kAZzVENQbICYlaLtGg_XJgrYg0E3jd_w/view"
           navigate="/robot-z"
         />
@@ -110,7 +111,11 @@ const Home = () => {
           title="Men In Black: Museum"
           src={mib}
           alt="Men In Black: Museum - poster"
-          description="Es un juego VR desarrollado para las Oculus Quest 2 y enfocado en la visualizacón y diseño de datos. Mis funciones en este proyecto fueron: Integración del KIT VRTK TILIA al proyecto, implementación de movimiento en VR, implementación de Snapping en VR, desarrollo e implementación de UI VR interactuable, desarrollo de infografías, diseño e implementación del nivel Cartelera del juego (Desarrollo de trampas y condiciones para que el jugador pueda escapar de la Sala)."
+          description={
+          <p>
+            Es un juego VR desarrollado para las Oculus Quest 2 y enfocado en la visualizacón y diseño de datos. Mis funciones en este proyecto fueron: Integración del KIT VRTK TILIA al proyecto, implementación de movimiento en VR, implementación de Snapping en VR, desarrollo e implementación de UI VR interactuable, desarrollo de infografías, diseño e implementación del nivel Cartelera del juego (Desarrollo de trampas y condiciones para que el jugador pueda escapar de la Sala)
+          </p>
+        }
           link="https://drive.google.com/file/d/1SjxuAWR8I0vBd9r7wPLB32b3EIlZEiJo/view"
           navigate="/mib-museum"
         />
