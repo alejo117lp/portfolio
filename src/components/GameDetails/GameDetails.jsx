@@ -8,15 +8,16 @@ const GameDetails = (props) => {
     <div className="principal-container">
       <h1 className="featured mt-4 mb-4">{props.name}</h1>
       <section className="game-summary mb-4">
-        <iframe
-          className="game-trailer"
-          width="560"
-          height="315"
-          src={props.videoLink}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+        <div className="video-container">
+          <iframe
+            className="game-trailer video-responsive"
+            src={props.videoLink}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+
         <div className="right-zone">
           {props.description}
           <a
