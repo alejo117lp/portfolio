@@ -1,43 +1,44 @@
 /* PROFILE SECTION */
-.profile-section{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile-head, .profile-description h3{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.profile-head,
+.profile-description h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.name-icon{
+.name-icon {
   display: flex;
   gap: 15px;
 }
 
-.logo-presentation{
+.logo-presentation {
   max-width: 190px;
 }
 
-.profile-description{
-	margin: 30px 0;
+.profile-description {
+  margin: 30px 0;
 }
 
-.profile-description h3{
-	margin: 15px 0 40px 0;
+.profile-description h3 {
+  margin: 15px 0 40px 0;
 }
 
 /* SKILLS SECTION */
-.skills-cards{
+.skills-cards {
   display: flex;
   margin: 50px 0 15px 0;
   justify-content: space-around;
 }
 
-.card-head{
+.card-head {
   display: flex;
   margin: 15px 0;
   border-radius: 5px;
@@ -46,7 +47,7 @@
 }
 
 .skills-cards .card-container {
-  background-color: #1C1C1C; /* Fondo gris oscuro */
+  background-color: #1c1c1c; /* Fondo gris oscuro */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -56,8 +57,7 @@
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
 }
 
-
-.card-head h5{
+.card-head h5 {
   margin: 0;
   padding: 10px 3px;
 }
@@ -69,33 +69,33 @@
   padding: 5px 0;
 }
 
-.card-row p{
+.card-row p {
   margin-bottom: 0;
 }
 
-.card-row i{
+.card-row i {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-container{
+.card-container {
   width: 18%;
   border-radius: 10px;
   padding: 10px 15px;
 }
 
-.skills-section{
+.skills-section {
   margin: 40px 0;
   padding: 30px 0;
   border-radius: 10px;
-  color: #D1D1E9;
+  color: #d1d1e9;
   background-color: #2e2e38;
 }
 
 /* CARUSEL SECTION */
 
-.wrapper{
+.wrapper {
   display: flex;
   width: 600px;
   height: 330px;
@@ -104,34 +104,37 @@
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card{
+.card {
   flex: 1;
   transition: flex 0.5s ease;
   cursor: pointer;
 }
 
-.card p{
+.card p {
   width: 100%;
   margin: 10px 0;
   text-align: center;
   font-style: italic;
 }
 
-.card:hover{
+.card:hover {
   flex: 10;
 }
 
 .card-row:hover {
-  color: #FFC107;
+  color: #ffc107;
 }
 
-.card1, .card2, .card3, .card4{
+.card1,
+.card2,
+.card3,
+.card4 {
   background-position: center;
   background-size: cover;
   transition: background-image 0.5s ease-in-out;
 }
 
-.carousel-frontend-pj{
+.carousel-frontend-pj {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,11 +142,11 @@
   padding: 50px 0;
 }
 
-.card1:hover{
-  background-image: url('../../assets/img/Prueba2.jpg') !important;
+.card1:hover {
+  background-image: url("../../assets/img/Prueba2.jpg") !important;
 }
 
-.carousel-container{
+.carousel-container {
   padding: 15px 0;
 }
 
@@ -151,36 +154,40 @@
 /* ------MEDIAQUEARIES ------*/
 /*******************************************************/
 
-
 /*******************************************************/
 /* ------MOBILE ------*/
 /*******************************************************/
 
 @media (width <= 767px) {
-  .name-icon{
+  .name-icon {
     flex-direction: column;
     align-items: center;
   }
 
-  .profile-head{
+  .profile-head {
     text-align: center;
   }
 
-  .profile-description p{
+  .profile-description p {
     text-align: justify;
   }
 
-  .skills-section .featured-2{
+  .skills-section {
+    background-color: #1c1c1c;
+  }
+
+  .skills-section .featured-2 {
     text-align: center;
   }
 
-  .skills-cards{
+  .skills-cards {
     flex-direction: column;
     gap: 15px;
   }
 
   .card-container {
     width: 100%;
+    background: linear-gradient(135deg, #2e2e38 0%, #3d3d4a 50%, #252534 100%);
   }
 }
 
@@ -189,25 +196,25 @@
 /*******************************************************/
 
 @media (width >= 768px) and (width <= 991px) {
-    .card-row{
-      gap: 15px;
-    }
+  .card-row {
+    gap: 15px;
+  }
 
-    .card-container {
-      width: 23%;
-      padding: 10px;
-    }
+  .card-container {
+    width: 23%;
+    padding: 10px;
+  }
 }
 /*******************************************************/
 /* ------LAPTOP ------*/
 /*******************************************************/
 @media (width >= 992px) and (width <= 1199px) {
-    .card-container {
-      width: 23%;
-      padding: 10px;
-    }
+  .card-container {
+    width: 23%;
+    padding: 10px;
+  }
 
-    .card-row{
-      gap: 10px;
-    }
+  .card-row {
+    gap: 10px;
+  }
 }
