@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4ce71756.css",
+    "main.css": "/portfolio/static/css/main.3d9e25b2.css",
     "main.js": "/portfolio/static/js/main.d2d2c46a.js",
     "static/media/TINAC_1.png": "/portfolio/static/media/TINAC_1.e919ef5250fa956bcc77.png",
     "static/media/MIB_1.png": "/portfolio/static/media/MIB_1.391db4302c89a32e112b.png",
@@ -15,11 +15,11 @@
     "static/media/web_fua_intranet.jpg": "/portfolio/static/media/web_fua_intranet.b25f48e033de3af41105.jpg",
     "static/media/web_fua_asistencias.jpg": "/portfolio/static/media/web_fua_asistencias.8457f4a0a98f07639904.jpg",
     "index.html": "/portfolio/index.html",
-    "main.4ce71756.css.map": "/portfolio/static/css/main.4ce71756.css.map",
+    "main.3d9e25b2.css.map": "/portfolio/static/css/main.3d9e25b2.css.map",
     "main.d2d2c46a.js.map": "/portfolio/static/js/main.d2d2c46a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ce71756.css",
+    "static/css/main.3d9e25b2.css",
     "static/js/main.d2d2c46a.js"
   ]
 }
