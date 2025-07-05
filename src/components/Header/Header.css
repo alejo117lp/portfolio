@@ -52,15 +52,14 @@ header a {
 .header-container .header-items nav a:hover,
 .home-item nav a:hover {
   /* color: #A0CFFF; */
-  color: #ffc107; /* Amarillo suave */
-  padding: 5px;
+  color: #ffc107;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: #ffc107;
   transform: scale(1.1);
-  border-radius: 5px 25px;
+  border-radius: 5px;
   text-shadow: 0 0 5px rgba(255, 193, 7, 0.6);
-  /* background-color: #2E4057; */
+  background-color: #2E4057;
 }
 
 /* Botón hamburguesa oculto en desktop */
@@ -94,9 +93,7 @@ header a {
 /* Responsive nav */
 @media (width < 768px) {
   .header-items {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 19px;
+    position: relative;
   }
 
   .home-nav {
@@ -116,17 +113,31 @@ header a {
 
   .views-items {
     display: none;
-    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
     width: 100%;
-    background-color: #0f1d35; /* fondo menú móvil */
-    padding: 10px 20px;
-    border: 2px solid #0078ff;
-    border-radius: 0 0 8px 8px;
+    background: #14203e;
+    padding: 20px 0;
+    z-index: 999;
   }
 
   .views-items.open {
     display: flex;
-    background: linear-gradient(135deg, #0f1d35 0%, #243b55 50%, #1b2a49 100%);
+    flex-direction: column;
+    padding: 10px 15px;
+    align-items: stretch;
+    animation: slideDown 300ms ease-out;
+  }
+
+  .views-items.open a:hover {
+    background: rgba(255, 215, 64, 0.1);
+    border-radius: 4px;
+  }
+
+  .header-container .header-items nav a:hover,
+  .home-item nav a:hover {
+    transform: none;
   }
 
   .menu-toggle {
@@ -137,10 +148,34 @@ header a {
     padding: 10px 0;
     width: 100%;
   }
+  .views-items.closing {
+    animation: slideUp 200ms ease-in forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+  }
 }
 
 @media (width >= 768px) and (width <= 991px) {
-  .header-container .header-items a {        /* asegura que flex-direction funcione */
+  .header-container .header-items a {
     flex-direction: column;
   }
 }
