@@ -10,7 +10,22 @@ const Header = () => {
 
   const isActive = (path) => location.pathname === path;
 
-  const toggleMenu = () => setMenuOpen(open => !open);
+  const toggleMenu = () => {
+  if (menuOpen) {
+    // disparar animación de cierre antes de ocultar
+    menuRef.current.classList.add("closing");
+    menuRef.current.addEventListener(
+      "animationend",
+      () => {
+        setMenuOpen(false);
+        menuRef.current.classList.remove("closing");
+      },
+      { once: true }
+    );
+  } else {
+    setMenuOpen(true);
+  }
+};
 
   useEffect(() => {
     function handleClickOutside(e) {

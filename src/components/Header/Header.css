@@ -111,28 +111,26 @@ header a {
 
   .views-items {
     display: none;
-    position: absolute;
-    top: 100%;    /* justo debajo del header */
+    position: fixed; /* anclado al viewport */
+    top: 80px; /* justo debajo del header de 80px */
     left: 0;
-    width: 100vw; /* todo el ancho de la ventana */
-    margin: 0;    /* quita márgenes heredados */
-    background: linear-gradient(135deg, #0f1d35 0%, #243b55 50%, #1b2a49 100%);
-    border: none;           /* opcional: elimina el borde azul */
-    border-radius: 0;       /* opcional: quita redondeos laterales */
-    padding: 10px 0 20px;   /* ajusta padding si quieres */
-    z-index: 100;           /* encima de todo */
+    width: 100%;
+    background: #14203e; /* fondo más oscuro para contraste */
+    padding: 20px 0; /* padding vertical */
+    z-index: 999;
   }
 
   .views-items.open {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #0f1d35 0%, #243b55 50%, #1b2a49 100%);
+    padding: 10px 15px;
+    align-items: stretch;
+    animation: slideDown 300ms ease-out;
   }
 
-  .views-items.open a {
-    width: 100%;
-    padding: 12px 20px;
+  .views-items.open a:hover {
+    background: rgba(255, 215, 64, 0.1);
+    border-radius: 4px;
   }
 
   .menu-toggle {
@@ -142,5 +140,30 @@ header a {
   .header-container .header-items nav a {
     padding: 10px 0;
     width: 100%;
+  }
+
+  .views-items.closing {
+    animation: slideUp 200ms ease-in forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
   }
 }
