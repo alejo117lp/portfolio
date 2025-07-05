@@ -39,7 +39,7 @@ header a {
 .header-container .header-items a {
   display: flex;
   align-items: center;
-  gap:10px;
+  gap: 8px;
   padding: 5px;
 }
 
@@ -92,9 +92,11 @@ header a {
 }
 
 /* Responsive nav */
-@media (max-width: 768px) {
+@media (width < 768px) {
   .header-items {
-    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
   }
 
   .home-nav {
@@ -114,26 +116,17 @@ header a {
 
   .views-items {
     display: none;
-    position: fixed; /* anclado al viewport */
-    top: 80px; /* justo debajo del header de 80px */
-    left: 0;
+    flex-direction: column;
     width: 100%;
-    background: #14203e; /* fondo más oscuro para contraste */
-    padding: 20px 0; /* padding vertical */
-    z-index: 999;
+    background-color: #0f1d35; /* fondo menú móvil */
+    padding: 10px 20px;
+    border: 2px solid #0078ff;
+    border-radius: 0 0 8px 8px;
   }
 
   .views-items.open {
     display: flex;
-    flex-direction: column;
-    padding: 10px 15px;
-    align-items: stretch;
-    animation: slideDown 300ms ease-out;
-  }
-
-  .views-items.open a:hover {
-    background: rgba(255, 215, 64, 0.1);
-    border-radius: 4px;
+    background: linear-gradient(135deg, #0f1d35 0%, #243b55 50%, #1b2a49 100%);
   }
 
   .menu-toggle {
@@ -144,29 +137,10 @@ header a {
     padding: 10px 0;
     width: 100%;
   }
+}
 
-  .views-items.closing {
-    animation: slideUp 200ms ease-in forwards;
-  }
-
-  @keyframes slideDown {
-    from {
-      transform: translateY(-10%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes slideUp {
-    from {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(-10%);
-      opacity: 0;
-    }
+@media (width >= 768px) and (width <= 991px) {
+  .header-container .header-items a {        /* asegura que flex-direction funcione */
+    flex-direction: column;
   }
 }
