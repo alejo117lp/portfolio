@@ -37,6 +37,9 @@ header a {
 }
 
 .header-container .header-items a {
+  display: flex;
+  align-items: center;
+  gap:10px;
   padding: 5px;
 }
 

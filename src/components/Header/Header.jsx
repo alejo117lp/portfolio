@@ -71,28 +71,32 @@ const Header = () => {
             className={isActive("/frontend-pj") ? "active-link" : ""}
             onClick={() => setMenuOpen(false)}
           >
-            Frontend
+            <i className="fa-solid fa-laptop-code"></i>
+            <span>Frontend</span>
           </Link>
           <Link
             to="/2d-games"
             className={isActive("/2d-games") ? "active-link" : ""}
             onClick={() => setMenuOpen(false)}
           >
-            Juegos 2D
+            <i className="fa-solid fa-gamepad"></i>
+            <span>Juegos 2D</span> 
           </Link>
           <Link
             to="/3d-games"
             className={isActive("/3d-games") ? "active-link" : ""}
             onClick={() => setMenuOpen(false)}
           >
-            Juegos 3D
+            <i className="fa-solid fa-cube"></i>
+            <span>Juegos 3D</span>
           </Link>
           <Link
             to="/vr-mob-games"
             className={isActive("/vr-mob-games") ? "active-link" : ""}
             onClick={() => setMenuOpen(false)}
           >
-            Juegos VR y Mobile
+            <i className="fa-solid fa-vr-cardboard"></i>
+            <span>Juegos VR y Mobile</span>
           </Link>
         </nav>
       </div>
