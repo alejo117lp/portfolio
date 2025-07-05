@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Header from './components/Header/Header';
 import TwoDGames from './pages/2d_games/TwoDGames';
 import ThreeDGames from './pages/3d_games/ThreeDGames';
@@ -26,6 +27,7 @@ function App() {
     <Router basename="/portfolio">
       <div className="App">
         <Header />
+        <ScrollToTop />
           <Routes>
             <Route path='/home' element={<Home />} />
             <Route path='/' element={<Home />} />
