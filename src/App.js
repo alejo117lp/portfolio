@@ -20,6 +20,7 @@ import TankWar from './pages/Games/TankWar';
 import TheLastJump from './pages/Games/TheLastJump';
 import ThisIsNotAChildhood from './pages/Games/ThisIsNotAChildhood';
 import PortalEmpleados from './pages/PortalEmpleados/PortalEmpleados';
+import AsistenciaEventos from './pages/AsistenciaEventos/AsistenciaEventos';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
             <Route path='/the-last-jump' element={<TheLastJump />} />
             <Route path='/tinac' element={<ThisIsNotAChildhood />} />
             <Route path='/portal-empleados' element={<PortalEmpleados />} />
+            <Route path='/asistencia-eventos' element={<AsistenciaEventos />} />
           </Routes>
         <Footer />
       </div>

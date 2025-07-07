@@ -1,8 +1,10 @@
 import React from "react";
 import '../../pages/PortalEmpleados/PortalEmpleados.css';
 import FrontendDetails from "../../components/FrontendDetails/FrontendDetails";
-import img1 from "../../assets/img/web_fua_intranet.jpg";
-import img2 from "../../assets/img/Hamony_1.png";
+import img1 from "../../assets/img/Intranet_01.png";
+import img2 from "../../assets/img/Intranet_02.png";
+import img3 from "../../assets/img/Intranet_03.png";
+import img4 from "../../assets/img/Intranet_04.png";
 
 const PortalEmpleados = () => {
   return (
@@ -21,6 +23,8 @@ const PortalEmpleados = () => {
         images={[
           { src: img1, alt: "Vista 1 del Portal de Empleados" },
           { src: img2, alt: "Vista 2 del Portal de Empleados" },
+          { src: img3, alt: "Vista 3 del Portal de Empleados" },
+          { src: img4, alt: "Vista 4 del Portal de Empleados" }
         ]}
 
         tasks={[

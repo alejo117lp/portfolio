@@ -18,12 +18,12 @@ const Frontend = () => {
           <strong>Portal de Empleados</strong>
         </Link>
 
-        <Link className="gpc-item zoom" to={'/robot-z'}>
+        <Link className="gpc-item zoom" to={'/asistencia-eventos'}>
           <img src={img2} alt="Asistencia a Eventos" />
           <strong>Asistencia a Eventos</strong>
         </Link>
 
-        <Link className="gpc-item zoom" to={'/robot-z'}>
+        <Link className="gpc-item zoom" to={'/app-contrataciones'}>
           <img src={img3} alt="Gestión de Contrataciones" />
           <strong>Gestión de Contrataciones</strong>
         </Link>

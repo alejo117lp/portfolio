@@ -52,7 +52,7 @@ const FrontendDetails = (props) => {
 
       <TaskTable
         tasks={props.tasks}
-        title="Caracteristicas:"
+        title="Contribuciones:"
         header1="N°"
         header2="Descripción"
       />
