@@ -13,20 +13,22 @@ const AsistenciaEventos = () => {
         title="Asistencia a Eventos"
         description={
           <>
-            Plataforma web integral para <strong>automatizar y centralizar la gestión de
-            eventos corporativos</strong>  de tipo capacitaciones, reuniones, y actividades de bienestar humano.
-						Esta app permite <strong>capturar datos del dispositivo</strong> a través del cual se registra la asistencia,
+            Plataforma web integral para <span className="highlight">automatizar y centralizar la gestión de
+            eventos corporativos</span>  de tipo capacitaciones, reuniones, y actividades de bienestar humano.
+						Esta app permite <span className="highlight">capturar datos del dispositivo</span> a través del cual se registra la asistencia.
+            <br />
             <br />
             Por otro lado, el panel de administrador permite crear eventos,
-            generar y sincronizar automáticamente <strong>códigos QR</strong> con Odoo, cargar archivos de evidenica y emitir
+            generar y sincronizar automáticamente <span className="highlight">códigos QR</span> con Odoo, cargar archivos de evidenica y emitir
             reportes en tiempo real.
             <br />
-            Asimismo, los participantes se <strong>autentican con credenciales de intranet</strong> y
+            Asimismo, los participantes se <span className="highlight">autentican con credenciales de intranet</span> y
             confirman su asistencia escaneando el código QR, garantizando
             seguridad, precisión y eliminación del papel.
             <br />
-            Gracias a esta solución, la empresa optimiza recursos, reduce
-            errores y acelera la generación de informes alineados con
+            <br />
+            Gracias a esta solución, la empresa optimiza recursos,
+            <span className="highlight"> reduce errores y acelera la generación de informes</span> alineados con
             sus objetivos estratégicos.
           </>
         }

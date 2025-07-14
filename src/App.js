@@ -21,6 +21,7 @@ import TheLastJump from './pages/Games/TheLastJump';
 import ThisIsNotAChildhood from './pages/Games/ThisIsNotAChildhood';
 import PortalEmpleados from './pages/PortalEmpleados/PortalEmpleados';
 import AsistenciaEventos from './pages/AsistenciaEventos/AsistenciaEventos';
+import GestionContrataciones from './pages/GestionContrataciones/GestionContrataciones';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             <Route path='/tinac' element={<ThisIsNotAChildhood />} />
             <Route path='/portal-empleados' element={<PortalEmpleados />} />
             <Route path='/asistencia-eventos' element={<AsistenciaEventos />} />
+            <Route path='/app-contrataciones' element={<GestionContrataciones />} />
           </Routes>
         <Footer />
       </div>

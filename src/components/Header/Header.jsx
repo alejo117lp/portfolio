@@ -55,7 +55,7 @@ const Header = () => {
               className={isActive("/home") || isActive("/") ? "active-link" : ""}
               onClick={() => setMenuOpen(false)}
             >
-              <i className="fa-solid fa-house mobile"></i>
+              <i className="fa-solid fa-house"></i>
               <span className="desktop">Inicio</span>
             </Link>
           </nav>
