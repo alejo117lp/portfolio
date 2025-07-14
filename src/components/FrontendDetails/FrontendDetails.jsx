@@ -7,7 +7,7 @@ const FrontendDetails = (props) => {
     <section className="frontend-details mt-4">
       <div className="info-container">
         <h2 className="featured">{props.title}</h2>
-        <p>{props.description}</p>
+        <p className="front-pj-description">{props.description}</p>
       </div>
 
       <div

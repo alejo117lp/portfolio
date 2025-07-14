@@ -13,10 +13,10 @@ const PortalEmpleados = () => {
         title="Portal de Empleados"
         description={
           <>
-            Se desarrolló un portal web integral diseñado para optimizar la comunicación y la gestión de información interna de la <strong>Fundación Universidad de Antioquia</strong>.<br />
+            Se desarrolló una nueva <strong className="highlight">intranet</strong> para optimizar la comunicación y la gestión de información interna de la <strong>Fundación Universidad de Antioquia</strong>.<br />
             Esta solución incluyó funcionalidades como un formulario para la actualización de datos generales, consulta de colillas de pago, generación de certificados laborales y firma de documentos, entre otros.<br />
             <br />
-            Mi rol fue <strong>diseñador</strong> y <strong>desarrollador frontend</strong>, utilizando <span style={{ fontWeight: 'bold' }}>Figma</span> para el diseño visual y <strong>React</strong> y <strong>Node.js</strong> para el desarrollo.<br />
+            Mi rol fue <strong className="highlight">diseñador</strong> y <strong className="highlight">desarrollador frontend</strong>, utilizando <strong className="highlight">Figma</strong> para el diseño visual y <strong className="highlight">React</strong> y <strong>Node.js</strong> para el desarrollo.<br />
             Se aplicaron principios de diseño responsivo para garantizar una experiencia de usuario óptima en diversos dispositivos.
           </>
         }
