@@ -1,25 +1,46 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3d9e25b2.css",
-    "main.js": "/portfolio/static/js/main.d2d2c46a.js",
+    "main.css": "/portfolio/static/css/main.b17bf294.css",
+    "main.js": "/portfolio/static/js/main.a331d20c.js",
     "static/media/TINAC_1.png": "/portfolio/static/media/TINAC_1.e919ef5250fa956bcc77.png",
+    "static/media/Harmony_02.png": "/portfolio/static/media/Harmony_02.490830491406de2639d8.png",
+    "static/media/Robot_03.png": "/portfolio/static/media/Robot_03.a3c780772f5b9e1d9a63.png",
+    "static/media/Harmony_03.png": "/portfolio/static/media/Harmony_03.f3ffd9ebf7494b6569f9.png",
+    "static/media/Robot_01.png": "/portfolio/static/media/Robot_01.ae2f1aaf72d26521bba7.png",
     "static/media/MIB_1.png": "/portfolio/static/media/MIB_1.391db4302c89a32e112b.png",
     "static/media/Delivery_1.png": "/portfolio/static/media/Delivery_1.5587bc719ba77d5a1aaf.png",
     "static/media/Robot-Z.png": "/portfolio/static/media/Robot-Z.f592266999e3f63dc10d.png",
-    "static/media/Hamony_1.png": "/portfolio/static/media/Hamony_1.25a97bcec0b38d569fd5.png",
+    "static/media/Robot_02.png": "/portfolio/static/media/Robot_02.4b80c79f26f0c3495a04.png",
+    "static/media/Harmony_01.png": "/portfolio/static/media/Harmony_01.25a97bcec0b38d569fd5.png",
+    "static/media/Asistencias_04.png": "/portfolio/static/media/Asistencias_04.49ee59284f6b71df2a8b.png",
+    "static/media/Intranet_03.png": "/portfolio/static/media/Intranet_03.d1b0527dabc5cec0bf11.png",
     "static/media/Tank_war_1.png": "/portfolio/static/media/Tank_war_1.21829f0c5acd1da35d41.png",
+    "static/media/Contrataciones_03.png": "/portfolio/static/media/Contrataciones_03.ae69b879d8f4783f3f39.png",
+    "static/media/TLJ_02.png": "/portfolio/static/media/TLJ_02.771948f09a39723eb0b2.png",
+    "static/media/Intranet_04.png": "/portfolio/static/media/Intranet_04.c5fbdec2040dbad75dba.png",
     "static/media/web_fua_contratos.png": "/portfolio/static/media/web_fua_contratos.ae036cb03a7225ca4c79.png",
+    "static/media/TLJ_04.png": "/portfolio/static/media/TLJ_04.a1315f07c229942696b3.png",
+    "static/media/TLJ_03.png": "/portfolio/static/media/TLJ_03.6681a00eaa9a44ff7497.png",
+    "static/media/Contrataciones_01.png": "/portfolio/static/media/Contrataciones_01.0cd8e5002d19b047aef7.png",
+    "static/media/Intranet_01.png": "/portfolio/static/media/Intranet_01.90c32511e3201eaf617e.png",
+    "static/media/Contrataciones_04.png": "/portfolio/static/media/Contrataciones_04.b30bc26ebc235c8c62e7.png",
     "static/media/poster mib.jpeg": "/portfolio/static/media/poster mib.04864845631cc8d46e6b.jpeg",
     "static/media/TLU_1.png": "/portfolio/static/media/TLU_1.f982d222fb9efc25d9e1.png",
+    "static/media/Contrataciones_02.png": "/portfolio/static/media/Contrataciones_02.d3d05a2672cf9fc7417f.png",
+    "static/media/Asistencias_01.png": "/portfolio/static/media/Asistencias_01.5b50223e0d5c955f41ff.png",
+    "static/media/Asistencias_03.png": "/portfolio/static/media/Asistencias_03.55616785f7d50232736f.png",
+    "static/media/Asistencias_02.png": "/portfolio/static/media/Asistencias_02.1d63b6e4f774e9b6f28a.png",
     "static/media/logo_1.png": "/portfolio/static/media/logo_1.080c1177ab69cb879a8a.png",
+    "static/media/Asistencias_05.png": "/portfolio/static/media/Asistencias_05.7c40a5adbed9cfdc0120.png",
+    "static/media/Intranet_02.png": "/portfolio/static/media/Intranet_02.570fbf13a490127bbed3.png",
     "static/media/web_fua_intranet.jpg": "/portfolio/static/media/web_fua_intranet.b25f48e033de3af41105.jpg",
     "static/media/web_fua_asistencias.jpg": "/portfolio/static/media/web_fua_asistencias.8457f4a0a98f07639904.jpg",
     "index.html": "/portfolio/index.html",
-    "main.3d9e25b2.css.map": "/portfolio/static/css/main.3d9e25b2.css.map",
-    "main.d2d2c46a.js.map": "/portfolio/static/js/main.d2d2c46a.js.map"
+    "main.b17bf294.css.map": "/portfolio/static/css/main.b17bf294.css.map",
+    "main.a331d20c.js.map": "/portfolio/static/js/main.a331d20c.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d9e25b2.css",
-    "static/js/main.d2d2c46a.js"
+    "static/css/main.b17bf294.css",
+    "static/js/main.a331d20c.js"
   ]
 }
