@@ -18,9 +18,9 @@ const ThreeDGames = () => {
           description={
             <p>
              Es un stealth, puzzle and fast game desarrollado durante mi tercer semestre de académico para el curso de <span className="highlight">Fundamentos de Programación.</span> 
-             Allí diseñé el nivel con todas sus zonas de trampas y power-ups, el concept de los personajes y la historia. 
+             Allí <span className="highlight">diseñé el nivel</span> con todas sus zonas de <span className="highlight">trampas y power-ups</span>, el concept de los personajes y la historia. 
              También, implementé las mecánicas (Caminar, Saltar, Agacharse, activar palancas, desactivar trampas, recolectar items), 
-             el nivel y cada uno de sus assets, el menú de inicio y pausa; las animaciones y las pantallas de Ganar y Perder."
+             el nivel y varios de sus assets, <span className="highlight">el menú de inicio y pausa</span>; las animaciones y las pantallas de Ganar y Perder."
             </p>
           }
           link="https://drive.google.com/file/d/1kAZzVENQbICYlaLtGg_XJgrYg0E3jd_w/view"

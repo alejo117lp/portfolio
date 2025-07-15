@@ -1,8 +1,8 @@
 import React from "react";
 import GameDetails from "../../components/GameDetails/GameDetails";
 import poster from "../../assets/img/Delivery_1.png";
-import img1 from "../../assets/img/Prueba1.jpg";
-import img2 from "../../assets/img/Prueba2.jpg";
+import img1 from "../../assets/img/Asistencias_01.png";
+import img2 from "../../assets/img/Asistencias_01.png";
 
 const DeliveryJourney = () => {
   return(

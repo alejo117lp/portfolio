@@ -21,7 +21,6 @@ const HarmonyMaster = () => {
       platforms="Windows"
       genre="Survival Platformer"
       status="Beta"
-      poster={poster}
       tasks={[
         "Implementación de VFX y SFX", 
         "Animación: Pantallas de Victoria y Game Over",
