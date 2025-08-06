@@ -11,6 +11,21 @@ const ThreeDGames = () => {
         <h1 className="featured">Juegos 3D</h1>
       </section>
       <section className="games-cards-section">
+         <GameCard 
+          title="Tank War"
+          src={TANK}
+          alt="Tanks - poster"
+          description={
+            <p>
+              Es un videojuego shooter en tercera persona, en el cual se busca tener una buena implementación de arte, 
+              diseño de nivel, enemigos, audio y jugabilidad, evitando todo tipo de bugs y haciendo una propuesta innovadora 
+              de mecánicas. El producto es para la entrega final del quinto semestre de la carrera.
+            </p>
+          }
+          link="https://drive.google.com/file/d/11Bk7QM78CwUIsgPWl5YAXjvgiKksYFk6/view?usp=sharing"
+          navigate="/tank-war"
+        />
+        
         <GameCard 
           title="Robot-Z"
           src={RobotZ}
@@ -40,21 +55,6 @@ const ThreeDGames = () => {
           }
           link="https://drive.google.com/file/d/1qsvZAj2MY4K6YFRcDaGPXPBrVflUJ_83/view?usp=sharing"
           navigate="/tinac"
-        />
-
-        <GameCard 
-          title="Tank War"
-          src={TANK}
-          alt="Tanks - poster"
-          description={
-            <p>
-              Es un videojuego shooter en tercera persona, en el cual se busca tener una buena implementación de arte, 
-              diseño de nivel, enemigos, audio y jugabilidad, evitando todo tipo de bugs y haciendo una propuesta innovadora 
-              de mecánicas. El producto es para la entrega final del quinto semestre de la carrera.
-            </p>
-          }
-          link="https://drive.google.com/file/d/11Bk7QM78CwUIsgPWl5YAXjvgiKksYFk6/view?usp=sharing"
-          navigate="/tank-war"
         />
       </section>
     </div>
