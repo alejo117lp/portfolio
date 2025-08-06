@@ -91,6 +91,7 @@ const Home = () => {
               sus turnos de trabajo, vacaciones entre otros.
             </p>
           }
+          navigate="/portal-empleados"
         />
       </section>
 
