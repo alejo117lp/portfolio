@@ -1,18 +1,31 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.b17bf294.css",
-    "main.js": "/portfolio/static/js/main.a331d20c.js",
+    "main.js": "/portfolio/static/js/main.f51f5306.js",
     "static/media/TINAC_1.png": "/portfolio/static/media/TINAC_1.e919ef5250fa956bcc77.png",
+    "static/media/tanks_02.png": "/portfolio/static/media/tanks_02.b078c3c4311d594e6955.png",
+    "static/media/tanks_03.png": "/portfolio/static/media/tanks_03.7c507af3de8d4b694929.png",
     "static/media/Harmony_02.png": "/portfolio/static/media/Harmony_02.490830491406de2639d8.png",
     "static/media/Robot_03.png": "/portfolio/static/media/Robot_03.a3c780772f5b9e1d9a63.png",
     "static/media/Harmony_03.png": "/portfolio/static/media/Harmony_03.f3ffd9ebf7494b6569f9.png",
     "static/media/Robot_01.png": "/portfolio/static/media/Robot_01.ae2f1aaf72d26521bba7.png",
     "static/media/MIB_1.png": "/portfolio/static/media/MIB_1.391db4302c89a32e112b.png",
+    "static/media/MIB_02.png": "/portfolio/static/media/MIB_02.935d6bf9bd3ea581941f.png",
     "static/media/Delivery_1.png": "/portfolio/static/media/Delivery_1.5587bc719ba77d5a1aaf.png",
+    "static/media/tinac_02.png": "/portfolio/static/media/tinac_02.0f9ad7fffe6699236d6d.png",
+    "static/media/delivery_02.png": "/portfolio/static/media/delivery_02.736d0513ba818cfb4ee2.png",
     "static/media/Robot-Z.png": "/portfolio/static/media/Robot-Z.f592266999e3f63dc10d.png",
+    "static/media/delivery_04.png": "/portfolio/static/media/delivery_04.3b8dd13a0b2305411a67.png",
+    "static/media/delivery_03.png": "/portfolio/static/media/delivery_03.313d0392d6b464468131.png",
+    "static/media/tinac_05.png": "/portfolio/static/media/tinac_05.59ed99fb89f5ca304e7c.png",
     "static/media/Robot_02.png": "/portfolio/static/media/Robot_02.4b80c79f26f0c3495a04.png",
+    "static/media/MIB_03.png": "/portfolio/static/media/MIB_03.f6833d6144973b448caa.png",
     "static/media/Harmony_01.png": "/portfolio/static/media/Harmony_01.25a97bcec0b38d569fd5.png",
+    "static/media/MIB_04.png": "/portfolio/static/media/MIB_04.2cf1ed245cd3c75d7655.png",
+    "static/media/tinac_03.png": "/portfolio/static/media/tinac_03.1df5e8d55e4f119c231a.png",
     "static/media/Asistencias_04.png": "/portfolio/static/media/Asistencias_04.49ee59284f6b71df2a8b.png",
+    "static/media/tinac_04.png": "/portfolio/static/media/tinac_04.ccf7a020f3341287f01a.png",
+    "static/media/tanks_01.png": "/portfolio/static/media/tanks_01.4f1d49559b9315d22202.png",
     "static/media/Intranet_03.png": "/portfolio/static/media/Intranet_03.d1b0527dabc5cec0bf11.png",
     "static/media/Tank_war_1.png": "/portfolio/static/media/Tank_war_1.21829f0c5acd1da35d41.png",
     "static/media/Contrataciones_03.png": "/portfolio/static/media/Contrataciones_03.ae69b879d8f4783f3f39.png",
@@ -37,10 +50,10 @@
     "static/media/web_fua_asistencias.jpg": "/portfolio/static/media/web_fua_asistencias.8457f4a0a98f07639904.jpg",
     "index.html": "/portfolio/index.html",
     "main.b17bf294.css.map": "/portfolio/static/css/main.b17bf294.css.map",
-    "main.a331d20c.js.map": "/portfolio/static/js/main.a331d20c.js.map"
+    "main.f51f5306.js.map": "/portfolio/static/js/main.f51f5306.js.map"
   },
   "entrypoints": [
     "static/css/main.b17bf294.css",
-    "static/js/main.a331d20c.js"
+    "static/js/main.f51f5306.js"
   ]
 }
