@@ -17,25 +17,23 @@ const GestionContrataciones = () => {
             fase del proceso de contrataciones. A través de una interfaz
             intuitiva, los usuarios pueden:
             <br />
-            <ul>
-              <li>Iniciar y dar seguimiento a solicitudes de contratación.</li>
-              <li>
-                Revisar de forma centralizada documentos y datos personales.
-              </li>
-              <li>
-                Coordinar la participación de Gestión Humana, SST y Jurídica en
-                el flujo completo.
-              </li>
-            </ul>
-            <p>
-              Mi responsabilidad incluyó el diseño y desarrollo del frontend con
-              <span className="highlight"> React</span> y{" "}
-              <span className="highlight">Node.js</span>, asegurando una{" "}
-              <span className="highlight">
-                experiencia de usuario fluida, accesible y totalmente responsiva
-              </span>
-              .
-            </p>
+            <br />
+              ⭐ Iniciar y dar seguimiento a solicitudes de contratación.  
+            <br />
+            <br />   
+              ⭐ Revisar de forma centralizada documentos y datos personales.
+            <br />
+            <br />
+              ⭐ Coordinar la participación de Gestión Humana, SST y Jurídica en
+              el flujo completo.
+            <br />
+            <br />
+            Mi responsabilidad incluyó el diseño y desarrollo del frontend con
+            <span className="highlight"> React</span> y{" "}
+            <span className="highlight">Node.js</span>, asegurando una{" "}
+            <span className="highlight">
+              experiencia de usuario fluida, accesible y totalmente responsiva
+            </span>
           </>
         }
         images={[

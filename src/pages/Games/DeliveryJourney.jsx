@@ -1,8 +1,9 @@
 import React from "react";
 import GameDetails from "../../components/GameDetails/GameDetails";
 import poster from "../../assets/img/Delivery_1.png";
-import img1 from "../../assets/img/Asistencias_01.png";
-import img2 from "../../assets/img/Asistencias_01.png";
+import img1 from "../../assets/img/delivery_02.png";
+import img2 from "../../assets/img/delivery_03.png";
+import img3 from "../../assets/img/delivery_04.png";
 
 const DeliveryJourney = () => {
   return(
@@ -21,10 +22,12 @@ const DeliveryJourney = () => {
       genre="Endless Runner"
       status="Beta"
       poster={poster}
-      tasks={["Diseño de Juego", "Narrativa"]}
+      tasks={["Diseño de Juego", "Narrativa", "Integración de Assets", "Desarrollo de Mecánicas"]}
       images={[
-        { src: img1, alt: "Vista 1 del Portal de Empleados" },
-        { src: img2, alt: "Vista 2 del Portal de Empleados" },
+        { src: poster, alt: "Poster delivery journey" },
+        { src: img1, alt: "Vista 1 del delivery journey" },
+        { src: img2, alt: "Vista 2 del delivery journey" },
+        { src: img3, alt: "Vista 3 del delivery journey" }
       ]}
     />
   )
