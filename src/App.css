@@ -31,10 +31,9 @@ body {
 /* Aquí se ajusta el contenedor principal */
 .principal-container {
   flex: 1;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   padding: 20px;
-  margin: 80px auto 0; /* se centra horizontalmente */
 }
 
 .mobile {

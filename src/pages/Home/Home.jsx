@@ -50,18 +50,10 @@ const Home = () => {
         </div>
         
         <div className="profile-description">
-          <h3 className="featured-2">¿Quién soy?</h3>
           <p>
             Ingeniero en Diseño de Entretenimiento Digital con énfasis en
-            <span className="highlight"> videojuegos</span>, experiencia en <span className="highlight">desarrollo web frontend</span> y nivel<span className="highlight"> B1 en inglés</span>. He trabajado
-            en proyectos utilizando React, JavaScript, Python, Django, Unity y
-            tecnologías como Google AppScript y la API de WhatsApp Business. En
-            mi actual rol como <span className="highlight">Analista de Tecnología e Innovación</span>, he sido
-            responsable del <span className="highlight">diseño y desarrollo de interfaces intuitivas y
-            responsivas</span>, además de la conexión eficiente entre frontend y
-            backend. Cuento con un fuerte enfoque en mejorar procesos a través
-            de herramientas colaborativas como Microsoft 365 y soluciones
-            innovadoras en software.
+            <span className="highlight"> videojuegos</span>, experiencia en 
+            <span className="highlight">desarrollo web frontend.</span>
           </p>
         </div>
       </section>
