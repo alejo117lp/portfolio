@@ -8,6 +8,75 @@ import logo from "../../assets/img/logo_1.png";
 import GameCard from "../../components/GameCard/GameCard";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
+/**
+ * Hook sencillo para revelar elementos al hacer scroll usando IntersectionObserver.
+ * Si en el futuro lo reutilizas en más pantallas, merece la pena extraerlo a un hook
+ * compartido (por ejemplo `src/hooks/useScrollReveal.js`).
+ */
+const useScrollReveal = ({
+  threshold = 0.15,
+  root = null,
+  rootMargin = "0px",
+  once = true,
+} = {}) => {
+  const ref = React.useRef(null);
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    const element = ref.current;
+
+    // Fallback en navegadores sin IntersectionObserver
+    if (!element || typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (once) {
+            observer.disconnect();
+          }
+        } else if (!once) {
+          setIsVisible(false);
+        }
+      },
+      { threshold, root, rootMargin }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [threshold, root, rootMargin, once]);
+
+  return { ref, isVisible };
+};
+
+/**
+ * Envuelve una sección existente y solo añade la animación de scroll.
+ * Respeta las clases originales para no romper tu diseño.
+ */
+const RevealSection = ({ id, className, children }) => {
+  const { ref, isVisible } = useScrollReveal();
+
+  const composedClassName = [
+    className,
+    "reveal",
+    isVisible ? "reveal--visible" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return (
+    <section id={id} ref={ref} className={composedClassName}>
+      {children}
+    </section>
+  );
+};
+
 const Home = () => {
   const frontendItems = [
     { iconName: "fa-brands fa-html5", description: "HTML" },
@@ -38,81 +107,100 @@ const Home = () => {
 
   return (
     <div className="principal-container">
-      <section className="profile-section">
-        <div className="name-icon">
-          <img src={logo} className="logo-presentation" alt="Logo Personal"></img>
+      <main className="home-main">
+        {/* Hero con texto grande tipo "Hi, I'm..." */}
+        <RevealSection id="perfil" className="profile-section">
           <div className="profile-head">
-            <h1 className="featured">Alejandro López Pérez</h1>
-            <h4 className="istok-italic">
-              Desarrollador Frontend y de Videojuegos
-            </h4>
+            <h1 className="hero-title">
+              <span className="hero-title-small">Hola, soy</span>
+              <br />
+              <span className="hero-title-highlight gradient-text">
+                Alejo López,
+              </span>
+              <br />
+              <span className="hero-title-role">
+                Desarrollador Frontend y de Videojuegos Junior
+              </span>
+            </h1>
           </div>
-        </div>
-        
-        <div className="profile-description">
-          <p>
-            Ingeniero en Diseño de Entretenimiento Digital con énfasis en
-            <span className="highlight"> videojuegos</span>, experiencia en 
-            <span className="highlight">desarrollo web frontend.</span>
-          </p>
-        </div>
-      </section>
-
-      {/* Technical skills */}
-      <section className="skills-section">
-        <h3 className="featured-2">Habilidades Técnicas</h3>
-        <div className="skills-cards">
-          <Card title="Frontend" items={frontendItems} />
-          <Card title="Backend" items={backendItems} />
-          <Card title="Videojuegos" items={gamesItems} />
-          <Card title="Otros" items={otherItems} />
-        </div>
-      </section>
-
-      {/* Frontend Projects Carousel */}
-      <section className="web-projects-section">
-        <h3 className="featured-2">Proyectos Front-End Destacados</h3>
-        <ProjectCard 
-          title="Portal de Empleados"
-          src={img1}
-          alt="Portal empleados"
-          description={
+          <div className="profile-description">
             <p>
-              Aplicación Web con conexión al ERP y desarrollada en <span className="highlight">React</span> para reemplazar la antigua intranet de la empresa. Allí
-              los empleados pueden gestionar su información personal, consultar colillas de pago, firmar documentos digitales, gestionar 
-              sus turnos de trabajo, vacaciones entre otros.
+              Ingeniero en Diseño de Entretenimiento Digital con énfasis en
+              <span className="highlight"> videojuegos</span> y experiencia en{" "}
+              <span className="highlight">desarrollo web frontend</span>.
             </p>
-          }
-          navigate="/portal-empleados"
-        />
-      </section>
+          </div>
+        </RevealSection>
 
-      {/* Proyectos Videojuegos */}
-      <section className="p-games-pj">
-        <h3 className="featured-2">Videojuegos Destacados</h3>
-        <GameCard 
-          title="Robot-Z"
-          src={robotZ}
-          alt="robot-Z poster"
-          description=
-          {<p>Es un stealth, puzzle and fast game desarrollado durante mi tercer semestre de académico para el curso de Fundamentos de Programación. Allí diseñé el nivel con todas sus zonas de trampas y power-ups, el concept de los personajes y la historia. También, implementé las mecánicas (Caminar, Saltar, Agacharse, activar palancas, desactivar trampas, recolectar items), el nivel y cada uno de sus assets, el menú de inicio y pausa; las animaciones y las pantallas de Ganar y Perder.</p>}
-          link="https://drive.google.com/file/d/1kAZzVENQbICYlaLtGg_XJgrYg0E3jd_w/view"
-          navigate="/robot-z"
-        />
-        <div className="horizontal-bar"></div>
-        <GameCard 
-          title="Men In Black: Museum"
-          src={mib}
-          alt="Men In Black: Museum - poster"
-          description={
-          <p>
-            Es un juego VR desarrollado para las Oculus Quest 2 y enfocado en la visualizacón y diseño de datos. Mis funciones en este proyecto fueron: Integración del KIT VRTK TILIA al proyecto, implementación de movimiento en VR, implementación de Snapping en VR, desarrollo e implementación de UI VR interactuable, desarrollo de infografías, diseño e implementación del nivel Cartelera del juego (Desarrollo de trampas y condiciones para que el jugador pueda escapar de la Sala)
-          </p>
-        }
-          link="https://drive.google.com/file/d/1SjxuAWR8I0vBd9r7wPLB32b3EIlZEiJo/view"
-          navigate="/mib-museum"
-        />
-      </section>
+        {/* Habilidades técnicas con tus cards actuales */}
+        <RevealSection id="habilidades" className="skills-section">
+          <h3 className="featured-2">Habilidades Técnicas</h3>
+          <div className="skills-cards">
+            <Card title="Frontend" items={frontendItems} />
+            <Card title="Backend" items={backendItems} />
+            <Card title="Videojuegos" items={gamesItems} />
+            <Card title="Otros" items={otherItems} />
+          </div>
+        </RevealSection>
+
+        {/* Proyectos Frontend destacados */}
+        <RevealSection id="proyectos-web" className="web-projects-section">
+          <h3 className="featured-2">Proyectos Front-End Destacados</h3>
+          <ProjectCard
+            title="Portal de Empleados"
+            src={img1}
+            alt="Portal de empleados"
+            description={
+              <p>
+                Aplicación Web conectada al ERP y desarrollada en{" "}
+                <span className="highlight">React</span> para reemplazar la
+                antigua intranet de la empresa. Permite a los empleados gestionar
+                su información personal, consultar colillas de pago, firmar
+                documentos digitales y administrar turnos y vacaciones.
+              </p>
+            }
+            navigate="/portal-empleados"
+          />
+        </RevealSection>
+
+        {/* Videojuegos destacados */}
+        <RevealSection id="videojuegos" className="p-games-pj">
+          <h3 className="featured-2">Videojuegos Destacados</h3>
+          <GameCard
+            title="Robot-Z"
+            src={robotZ}
+            alt="Poster del juego Robot-Z"
+            description={
+              <p>
+                Juego stealth, puzzle and fast game desarrollado en mi tercer
+                semestre académico. Diseñé el nivel con sus zonas de trampas y
+                power-ups, el concept de personajes y la historia, además de
+                implementar las mecánicas principales, menús y pantallas de
+                feedback.
+              </p>
+            }
+            link="https://drive.google.com/file/d/1kAZzVENQbICYlaLtGg_XJgrYg0E3jd_w/view"
+            navigate="/robot-z"
+          />
+          <div className="horizontal-bar"></div>
+          <GameCard
+            title="Men In Black: Museum"
+            src={mib}
+            alt="Poster del juego Men In Black: Museum"
+            description={
+              <p>
+                Juego VR para Oculus Quest 2 centrado en visualización y diseño de
+                datos. Me encargué de la integración del kit VRTK TILIA, el
+                movimiento y snapping en VR, la UI interactuable, las infografías y
+                el diseño del nivel Cartelera con sus retos para que el jugador
+                pueda escapar de la sala.
+              </p>
+            }
+            link="https://drive.google.com/file/d/1SjxuAWR8I0vBd9r7wPLB32b3EIlZEiJo/view"
+            navigate="/mib-museum"
+          />
+        </RevealSection>
+      </main>
     </div>
   );
 };

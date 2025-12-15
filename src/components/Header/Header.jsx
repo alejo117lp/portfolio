@@ -1,104 +1,80 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
+const navItems = [
+  { to: "/home", label: "Inicio", icon: "fa-solid fa-house" },
+  { to: "/frontend-pj", label: "Frontend", icon: "fa-solid fa-laptop-code" },
+  { to: "/2d-games", label: "Juegos 2D", icon: "fa-solid fa-gamepad" },
+  { to: "/3d-games", label: "Juegos 3D", icon: "fa-solid fa-cube" },
+  {
+    to: "/vr-mob-games",
+    label: "VR / Mobile",
+    icon: "fa-solid fa-vr-cardboard",
+  },
+];
+
 const Header = () => {
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-  const btnRef = useRef(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const isActive = (path) => location.pathname === path;
-
-  const toggleMenu = () => {
-  if (menuOpen) {
-    // disparar animación de cierre antes de ocultar
-    menuRef.current.classList.add("closing");
-    menuRef.current.addEventListener(
-      "animationend",
-      () => {
-        setMenuOpen(false);
-        menuRef.current.classList.remove("closing");
-      },
-      { once: true }
-    );
-  } else {
-    setMenuOpen(true);
-  }
-};
+  const isActive = (path) =>
+    location.pathname === path ||
+    (path === "/home" && (location.pathname === "/" || location.pathname === ""));
 
   useEffect(() => {
-    function handleClickOutside(e) {
-      // si el menú está abierto y el clic no es ni en el menú ni en el botón
-      if (
-        menuOpen &&
-        menuRef.current &&
-        !menuRef.current.contains(e.target) &&
-        btnRef.current &&
-        !btnRef.current.contains(e.target)
-      ) {
-        setMenuOpen(false);
-      }
-    }
+    // Cierra el menú móvil al cambiar de ruta
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [menuOpen]);
+  const handleToggle = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
 
   return (
-    <header className="header-container">
-      <div className="header-items">
-        <div className="home-nav">
-          <nav className="home-item">
-            <Link
-              to="/home"
-              className={isActive("/home") || isActive("/") ? "active-link" : ""}
-              onClick={() => setMenuOpen(false)}
-            >
-              <i className="fa-solid fa-house"></i>
-              <span className="desktop">Inicio</span>
-            </Link>
-          </nav>
+    <header
+      className={`app-sidebar ${
+        isMobileMenuOpen ? "app-sidebar--mobile-open" : ""
+      }`}
+    >
+      <div className="app-sidebar__logo">
+        <Link to="/home" aria-label="Volver al inicio">
+          <span className="app-sidebar__logo-text">A</span>
+        </Link>
+      </div>
 
-          <button ref={btnRef} className="menu-toggle" onClick={toggleMenu}>
-            {menuOpen ? "✕" : "☰"}
-          </button>
-        </div>
+      <button
+        type="button"
+        className="app-sidebar__toggle"
+        aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={isMobileMenuOpen}
+        onClick={handleToggle}
+      >
+        {isMobileMenuOpen ? "✕" : "☰"}
+      </button>
 
-        <nav className={`views-items ${menuOpen ? "open" : ""}`} ref={menuRef}>
+      <nav
+        className={`app-sidebar__nav ${
+          isMobileMenuOpen ? "app-sidebar__nav--open" : ""
+        }`}
+        aria-label="Navegación principal"
+      >
+        {navItems.map((item) => (
           <Link
-            to="/frontend-pj"
-            className={isActive("/frontend-pj") ? "active-link" : ""}
-            onClick={() => setMenuOpen(false)}
+            key={item.to}
+            to={item.to}
+            className={`app-sidebar__link ${
+              isActive(item.to) ? "app-sidebar__link--active" : ""
+            }`}
           >
-            <i className="fa-solid fa-laptop-code"></i>
-            <span>Frontend</span>
+            <i className={item.icon} aria-hidden="true"></i>
+            <span className="app-sidebar__label">{item.label}</span>
           </Link>
-          <Link
-            to="/2d-games"
-            className={isActive("/2d-games") ? "active-link" : ""}
-            onClick={() => setMenuOpen(false)}
-          >
-            <i className="fa-solid fa-gamepad"></i>
-            <span>Juegos 2D</span> 
-          </Link>
-          <Link
-            to="/3d-games"
-            className={isActive("/3d-games") ? "active-link" : ""}
-            onClick={() => setMenuOpen(false)}
-          >
-            <i className="fa-solid fa-cube"></i>
-            <span>Juegos 3D</span>
-          </Link>
-          <Link
-            to="/vr-mob-games"
-            className={isActive("/vr-mob-games") ? "active-link" : ""}
-            onClick={() => setMenuOpen(false)}
-          >
-            <i className="fa-solid fa-vr-cardboard"></i>
-            <span>Juegos VR y Mobile</span>
-          </Link>
-        </nav>
+        ))}
+      </nav>
+
+      <div className="app-sidebar__footer">
+        <span className="app-sidebar__initials">Alejo</span>
       </div>
     </header>
   );

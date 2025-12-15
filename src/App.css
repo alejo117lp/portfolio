@@ -7,6 +7,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   /* background-color: #121212; */
   background: linear-gradient(90deg, #121212 0%, #1c1c1c 100%);
   background-attachment: fixed;
@@ -33,7 +34,7 @@ body {
   flex: 1;
   width: 100%;
   max-width: 1200px;
-  padding: 20px;
+  padding: 20px 20px 20px 110px; /* deja espacio para el sidebar fijo */
 }
 
 .mobile {
@@ -49,8 +50,8 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-style: normal;
-  color: #ffc107;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  color: #f9fafb;
+  text-shadow: 0 0 25px rgba(15, 23, 42, 0.9);
 }
 
 .featured-2 {
@@ -71,26 +72,80 @@ body {
 }
 
 .highlight {
-  color: #ffc107;
+  color: #7252ff;
+}
+
+/* Paleta inspirada en Pedro Vanlume */
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(114 82 255 / var(--tw-text-opacity));
+}
+
+.gradient-text {
+  font-weight: 700;
+  background: linear-gradient(45deg, #5271ff, #7252ff, #dc52ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn-a {
-  color: #fff;
-  font-weight: bold;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: radial-gradient(circle at 0% 0%, #5271ff, #7252ff 45%, #1f2937);
+  color: #f9fafb;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
-  padding: 10px 30px;
-  border-radius: 5px 25px;
-  background-color: #00a6ed;
-  transition: background-color 0.3s ease, border-radius 0.3s ease,
-    transform 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.7);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.2s ease-out,
+    border-color 0.2s ease-out,
+    background 0.25s ease-out,
+    color 0.15s ease-out;
+}
+
+.btn-a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 0% 0%, #ffffff33, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  pointer-events: none;
 }
 
 .btn-a:hover {
-  transform: scale(1.1);
-  border-radius: 5px 5px;
-  color: #000;
-  background-color: #ffc107;
-  box-shadow: 0 0 20px rgba(255, 193, 7, 0.7);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.85);
+  border-color: rgba(250, 250, 250, 0.18);
+}
+
+.btn-a:hover::before {
+  opacity: 1;
+}
+
+.btn-a:active {
+  transform: translateY(0) scale(0.99);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.8);
+}
+
+.btn-a:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow:
+    0 0 0 1px #020617,
+    0 0 0 3px rgba(114, 82, 255, 0.9),
+    0 18px 40px rgba(15, 23, 42, 0.9);
 }
 
 .zoom {
@@ -133,6 +188,10 @@ body {
 
   .desktop {
     display: none;
+  }
+
+  .principal-container {
+    padding: 80px 16px 16px 16px; /* barra superior en móvil */
   }
 
   .featured {

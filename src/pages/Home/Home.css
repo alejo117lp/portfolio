@@ -1,30 +1,29 @@
-/* PROFILE SECTION */
+.home-main {
+  padding: 4rem 6vw 3rem;
+}
+
+/* Animaciones de aparición suave al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PROFILE / HERO SECTION */
 .profile-section {
   display: flex;
   flex-direction: column;
-  height: calc(100dvh - 20px);
+  min-height: calc(100dvh - 20px);
+  padding: 3.5rem 0 2.5rem;
   justify-content: center;
-  align-items: center;
-}
-
-.profile-head,
-.profile-description h3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.name-icon {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo-presentation {
-  max-width: 190px;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
 .profile-description {
@@ -33,11 +32,32 @@
 }
 
 .profile-description p {
-  text-align: center;
+  text-align: left;
 }
 
 .profile-description h3 {
   margin: 15px 0 40px 0;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.hero-title-small {
+  font-size: 0.6em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.hero-title-highlight {
+  color: #7252ff;
+}
+
+.hero-title-role {
+  font-size: 0.7em;
+  font-weight: 400;
+  opacity: 0.85;
 }
 
 /* SKILLS SECTION */
@@ -54,20 +74,20 @@
   display: flex;
   margin: 15px 0;
   border-radius: 5px;
-  border: 1px solid #d1d1e9;
+  border: 1px solid rgba(148, 163, 184, 0.35);
   justify-content: center;
 }
 
 .skills-cards .card-container {
   width: 100%;
-  background-color: #1c1c1c; /* Fondo gris oscuro */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: radial-gradient(circle at top left, #111827, #020617 55%);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills-cards .card-container:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7);
 }
 
 .card-head h5 {
@@ -103,7 +123,8 @@
   padding: 30px 0;
   border-radius: 10px;
   color: #d1d1e9;
-  background-color: #2e2e38;
+  background: radial-gradient(circle at top left, #020617, #020617 40%, #111827);
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 /* CARUSEL SECTION */
@@ -135,7 +156,7 @@
 }
 
 .card-row:hover {
-  color: #ffc107;
+  color: #7252ff;
 }
 
 .card1,
@@ -163,6 +184,18 @@
   padding: 15px 0;
 }
 
+/* Separador entre tarjetas de videojuegos */
+.horizontal-bar {
+  height: 1px;
+  margin: 24px 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(114, 82, 255, 0.7),
+    transparent
+  );
+}
+
 /*******************************************************/
 /* ------MEDIAQUEARIES ------*/
 /*******************************************************/
@@ -172,13 +205,28 @@
 /*******************************************************/
 
 @media (width <= 767px) {
-  .name-icon {
-    flex-direction: column;
-    align-items: center;
+  .home-main {
+    padding: 2.75rem 1.25rem 2.25rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .profile-section {
+    min-height: auto;
+    align-items: flex-start;
+    gap: 1.25rem;
   }
 
   .profile-head {
-    text-align: center;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .profile-description {
+    margin: 20px 0;
   }
 
   .skills-section {
@@ -190,13 +238,18 @@
   }
 
   .skills-cards {
-    flex-direction: column;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0;
   }
 
   .card-container {
     width: 100%;
     background: linear-gradient(135deg, #2e2e38 0%, #3d3d4a 50%, #252534 100%);
+  }
+
+  .wrapper {
+    width: 100%;
   }
 }
 
