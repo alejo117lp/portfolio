@@ -5,14 +5,47 @@
 /* Animaciones de aparición suave al hacer scroll */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(32px) scale(0.96);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity, transform;
 }
 
 .reveal.reveal--visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+}
+
+/* Animaciones profesionales para cards individuales */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.9) rotateX(8deg);
+  transition: opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.reveal-card--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+  animation: cardPopIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) var(--delay, 0ms) both;
+}
+
+@keyframes cardPopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.85) rotateX(12deg);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02) rotateX(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
 }
 
 /* PROFILE / HERO SECTION */
@@ -68,31 +101,84 @@
   padding: 0 1rem;
   margin: 50px 0 15px 0;
   justify-content: space-around;
+  align-items: stretch;
 }
 
 .card-head {
   display: flex;
   margin: 15px 0;
-  border-radius: 5px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 8px;
+  border: 1px solid rgba(114, 82, 255, 0.3);
+  background: rgba(114, 82, 255, 0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   justify-content: center;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.skills-cards .card-container:hover .card-head {
+  border-color: rgba(114, 82, 255, 0.5);
+  background: rgba(114, 82, 255, 0.12);
 }
 
 .skills-cards .card-container {
   width: 100%;
-  background: radial-gradient(circle at top left, #111827, #020617 55%);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1.5px solid rgba(114, 82, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(114, 82, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-cards .card-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(114, 82, 255, 0.6), rgba(82, 113, 255, 0.4), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .skills-cards .card-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7);
+  transform: scale(1.05) translateY(-2px);
+  border-color: rgba(114, 82, 255, 0.8);
+  background: rgba(15, 23, 42, 0.55);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 24px rgba(114, 82, 255, 0.4);
+}
+
+.skills-cards .card-container:hover::before {
+  opacity: 1;
 }
 
 .card-head h5 {
   margin: 0;
   padding: 10px 3px;
+}
+
+.skills-cards .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card-row {
@@ -118,8 +204,11 @@
   padding: 10px 15px;
 }
 
+.section-wrapper {
+  margin: 5rem 0 3rem;
+}
+
 .skills-section {
-  margin: 40px 0;
   padding: 30px 0;
   border-radius: 10px;
   color: #d1d1e9;
@@ -184,16 +273,19 @@
   padding: 15px 0;
 }
 
-/* Separador entre tarjetas de videojuegos */
+/* Separador entre secciones principales */
 .horizontal-bar {
   height: 1px;
-  margin: 24px 0;
+  margin: 4rem 0;
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(114, 82, 255, 0.7),
+    rgba(114, 82, 255, 0.6),
+    rgba(82, 113, 255, 0.8),
+    rgba(114, 82, 255, 0.6),
     transparent
   );
+  box-shadow: 0 0 8px rgba(114, 82, 255, 0.3);
 }
 
 /*******************************************************/

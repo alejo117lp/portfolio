@@ -16,7 +16,7 @@ const useScrollReveal = ({
   threshold = 0.15,
   root = null,
   rootMargin = "0px",
-  once = true,
+  once = false, // Cambiado a false para que se reactive cada vez
 } = {}) => {
   const ref = React.useRef(null);
   const [isVisible, setIsVisible] = React.useState(false);
@@ -58,8 +58,8 @@ const useScrollReveal = ({
  * Envuelve una sección existente y solo añade la animación de scroll.
  * Respeta las clases originales para no romper tu diseño.
  */
-const RevealSection = ({ id, className, children }) => {
-  const { ref, isVisible } = useScrollReveal();
+const RevealSection = ({ id, className, children, once = false }) => {
+  const { ref, isVisible } = useScrollReveal({ once });
 
   const composedClassName = [
     className,
@@ -73,6 +73,23 @@ const RevealSection = ({ id, className, children }) => {
     <section id={id} ref={ref} className={composedClassName}>
       {children}
     </section>
+  );
+};
+
+/**
+ * Wrapper para cards individuales con animación stagger
+ */
+const RevealCard = ({ children, delay = 0 }) => {
+  const { ref, isVisible } = useScrollReveal();
+
+  return (
+    <div
+      ref={ref}
+      className={`reveal-card ${isVisible ? "reveal-card--visible" : ""}`}
+      style={{ "--delay": `${delay}ms` }}
+    >
+      {children}
+    </div>
   );
 };
 
@@ -108,7 +125,7 @@ const Home = () => {
     <div className="principal-container">
       <main className="home-main">
         {/* Hero con texto grande tipo "Hi, I'm..." */}
-        <RevealSection id="perfil" className="profile-section">
+        <RevealSection id="perfil" className="profile-section" once={true}>
           <div className="profile-head">
             <h1 className="hero-title">
               <span className="hero-title-small">Hola, soy</span>
@@ -132,72 +149,95 @@ const Home = () => {
         </RevealSection>
 
         {/* Habilidades técnicas con tus cards actuales */}
-        <RevealSection id="habilidades" className="skills-section">
+        <RevealSection id="habilidades" className="section-wrapper">
           <h3 className="featured-2">Habilidades Técnicas</h3>
-          <div className="skills-cards">
-            <Card title="Frontend" items={frontendItems} />
-            <Card title="Backend" items={backendItems} />
-            <Card title="Videojuegos" items={gamesItems} />
-            <Card title="Otros" items={otherItems} />
+          <div className="skills-section">
+            <div className="skills-cards">
+            <RevealCard delay={0}>
+              <Card title="Frontend" items={frontendItems} />
+            </RevealCard>
+            <RevealCard delay={100}>
+              <Card title="Backend" items={backendItems} />
+            </RevealCard>
+            <RevealCard delay={200}>
+              <Card title="Videojuegos" items={gamesItems} />
+            </RevealCard>
+            <RevealCard delay={300}>
+              <Card title="Otros" items={otherItems} />
+            </RevealCard>
+          </div>
           </div>
         </RevealSection>
 
+        <div className="horizontal-bar"></div>
+
         {/* Proyectos Frontend destacados */}
-        <RevealSection id="proyectos-web" className="web-projects-section">
+        <RevealSection id="proyectos-web" className="section-wrapper">
           <h3 className="featured-2">Proyectos Front-End Destacados</h3>
-          <ProjectCard
-            title="Portal de Empleados"
-            src={img1}
-            alt="Portal de empleados"
-            description={
-              <p>
-                Aplicación Web conectada al ERP y desarrollada en{" "}
-                <span className="highlight">React</span> para reemplazar la
-                antigua intranet de la empresa. Permite a los empleados gestionar
-                su información personal, consultar colillas de pago, firmar
-                documentos digitales y administrar turnos y vacaciones.
-              </p>
-            }
-            navigate="/portal-empleados"
-          />
+          <div className="web-projects-section">
+          <RevealCard delay={150}>
+            <ProjectCard
+              title="Portal de Empleados"
+              src={img1}
+              alt="Portal de empleados"
+              description={
+                <p>
+                  Aplicación Web conectada al ERP y desarrollada en{" "}
+                  <span className="highlight">React</span> para reemplazar la
+                  antigua intranet de la empresa. Permite a los empleados gestionar
+                  su información personal, consultar colillas de pago, firmar
+                  documentos digitales y administrar turnos y vacaciones.
+                </p>
+              }
+              navigate="/portal-empleados"
+            />
+          </RevealCard>
+          </div>
         </RevealSection>
 
+        <div className="horizontal-bar"></div>
+
         {/* Videojuegos destacados */}
-        <RevealSection id="videojuegos" className="p-games-pj">
+        <RevealSection id="videojuegos" className="section-wrapper">
           <h3 className="featured-2">Videojuegos Destacados</h3>
-          <GameCard
-            title="Robot-Z"
-            src={robotZ}
-            alt="Poster del juego Robot-Z"
-            description={
-              <p>
-                Juego stealth, puzzle and fast game desarrollado en mi tercer
-                semestre académico. Diseñé el nivel con sus zonas de trampas y
-                power-ups, el concept de personajes y la historia, además de
-                implementar las mecánicas principales, menús y pantallas de
-                feedback.
-              </p>
-            }
-            link="https://drive.google.com/file/d/1kAZzVENQbICYlaLtGg_XJgrYg0E3jd_w/view"
-            navigate="/robot-z"
-          />
-          <div className="horizontal-bar"></div>
-          <GameCard
-            title="Men In Black: Museum"
-            src={mib}
-            alt="Poster del juego Men In Black: Museum"
-            description={
-              <p>
-                Juego VR para Oculus Quest 2 centrado en visualización y diseño de
-                datos. Me encargué de la integración del kit VRTK TILIA, el
-                movimiento y snapping en VR, la UI interactuable, las infografías y
-                el diseño del nivel Cartelera con sus retos para que el jugador
-                pueda escapar de la sala.
-              </p>
-            }
-            link="https://drive.google.com/file/d/1SjxuAWR8I0vBd9r7wPLB32b3EIlZEiJo/view"
-            navigate="/mib-museum"
-          />
+          <div className="p-games-pj">
+          <RevealCard delay={0}>
+            <GameCard
+              title="Robot-Z"
+              src={robotZ}
+              alt="Poster del juego Robot-Z"
+              description={
+                <p>
+                  Juego stealth, puzzle and fast game desarrollado en mi tercer
+                  semestre académico. Diseñé el nivel con sus zonas de trampas y
+                  power-ups, el concept de personajes y la historia, además de
+                  implementar las mecánicas principales, menús y pantallas de
+                  feedback.
+                </p>
+              }
+              link="https://drive.google.com/file/d/1kAZzVENQbICYlaLtGg_XJgrYg0E3jd_w/view"
+              navigate="/robot-z"
+            />
+          </RevealCard>
+          <RevealCard delay={200}>
+            <GameCard
+              title="Men In Black: Museum"
+              src={mib}
+              alt="Poster del juego Men In Black: Museum"
+              description={
+                <p>
+                  Juego VR para Oculus Quest 2 centrado en visualización y diseño de
+                  datos. Me encargué de la integración del kit VRTK TILIA, el
+                  movimiento y snapping en VR, la UI interactuable, las infografías y
+                  el diseño del nivel Cartelera con sus retos para que el jugador
+                  pueda escapar de la sala.
+                </p>
+              }
+              link="https://drive.google.com/file/d/1SjxuAWR8I0vBd9r7wPLB32b3EIlZEiJo/view"
+              navigate="/mib-museum"
+            />
+          </RevealCard>
+          </div>
         </RevealSection>
       </main>
     </div>
