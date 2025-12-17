@@ -1,20 +1,26 @@
 import React from "react";
 import "./FrontendDetails.css";
 import TaskTable from "../TaskTable/TaskTable";
+import { RevealSection, RevealCard } from "../../hooks/useScrollReveal";
 
 const FrontendDetails = (props) => {
   return (
     <section className="frontend-details mt-4">
-      <div className="info-container">
+      <RevealSection className="intro-section" once={true}>
         <h2 className="featured">{props.title}</h2>
-        <p className="front-pj-description">{props.description}</p>
-      </div>
+      </RevealSection>
+      <RevealCard delay={0}>
+        <div className="info-container">
+          <p className="front-pj-description">{props.description}</p>
+        </div>
+      </RevealCard>
 
-      <div
-        id="frontendCarousel"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
+      <RevealCard delay={150}>
+        <div
+          id="frontendCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
         <div className="carousel-inner">
           {props.images.map((image, index) => (
             <div
@@ -48,14 +54,17 @@ const FrontendDetails = (props) => {
           <span className="carousel-control-next-icon" aria-hidden="true" />
           <span className="visually-hidden">Next</span>
         </button>
-      </div>
+        </div>
+      </RevealCard>
 
-      <TaskTable
-        tasks={props.tasks}
-        title="Contribuciones:"
-        header1="N°"
-        header2="Descripción"
-      />
+      <RevealCard delay={300}>
+        <TaskTable
+          tasks={props.tasks}
+          title="Contribuciones:"
+          header1="N°"
+          header2="Descripción"
+        />
+      </RevealCard>
     </section>
   );
 };

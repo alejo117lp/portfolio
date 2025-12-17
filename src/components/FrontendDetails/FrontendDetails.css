@@ -1,5 +1,26 @@
+.frontend-details {
+  width: 100%;
+}
+
+.info-container {
+  padding: 20px;
+  margin: 0 auto 30px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1.5px solid rgba(114, 82, 255, 0.5);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #f9fafb;
+  width: 100%;
+  max-width: 1200px;
+}
+
 .front-pj-description{
     text-align: justify;
+    color: #e5e7eb;
 }
   
   

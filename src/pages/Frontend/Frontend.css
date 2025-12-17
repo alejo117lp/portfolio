@@ -12,12 +12,32 @@
     gap: 15px;
     color: #fff;
     text-decoration: none;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1.5px solid rgba(114, 82, 255, 0.5);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 0 1px rgba(114, 82, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .gpc-item:hover{
-    color: #dacc2d;
+    color: #7252ff;
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(114, 82, 255, 0.8);
+    background: rgba(15, 23, 42, 0.75);
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 24px rgba(114, 82, 255, 0.4);
 }
 
 .gpc-item img{
     border-radius: 8px;
+    width: 100%;
+    height: auto;
 }

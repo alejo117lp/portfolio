@@ -5,9 +5,14 @@
   border-radius: 10px;
   margin: 35px 0;
   padding: 2% 4%;
-  background: radial-gradient(circle at top left, #020617, #020617 40%, #111827);
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1.5px solid rgba(114, 82, 255, 0.5);
+  box-shadow: 
+    0 14px 35px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(114, 82, 255, 0.2);
 }
 
 .game-card-container h4{
@@ -19,8 +24,12 @@
 
 .game-card-container:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.8);
-  border-color: rgba(114, 82, 255, 0.6);
+  background: rgba(15, 23, 42, 0.85);
+  box-shadow: 
+    0 22px 45px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 24px rgba(114, 82, 255, 0.4);
+  border-color: rgba(114, 82, 255, 0.8);
 }
 
 .game-card-container img{

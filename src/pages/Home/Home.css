@@ -275,17 +275,38 @@
 
 /* Separador entre secciones principales */
 .horizontal-bar {
-  height: 1px;
+  height: 2px;
   margin: 4rem 0;
   background: linear-gradient(
     90deg,
+    transparent 0%,
+    rgba(114, 82, 255, 0.4) 15%,
+    rgba(114, 82, 255, 0.9) 30%,
+    rgba(82, 113, 255, 1) 50%,
+    rgba(114, 82, 255, 0.9) 70%,
+    rgba(114, 82, 255, 0.4) 85%,
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 12px rgba(114, 82, 255, 0.6),
+    0 0 24px rgba(114, 82, 255, 0.3);
+  border-radius: 1px;
+  position: relative;
+}
+
+.horizontal-bar::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    90deg,
     transparent,
-    rgba(114, 82, 255, 0.6),
-    rgba(82, 113, 255, 0.8),
-    rgba(114, 82, 255, 0.6),
+    rgba(114, 82, 255, 0.2),
     transparent
   );
-  box-shadow: 0 0 8px rgba(114, 82, 255, 0.3);
+  border-radius: inherit;
+  filter: blur(4px);
+  z-index: -1;
 }
 
 /*******************************************************/

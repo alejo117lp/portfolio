@@ -3,15 +3,21 @@
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 12px;
-    background-color: #111;
-    /* overflow: hidden;  <-- opcional si deseas esquinas recortadas */
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1.5px solid rgba(114, 82, 255, 0.5);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    overflow: hidden;
   }
   
   /* Altura fija (o semificja) del carrusel en desktop */
   #frontendCarousel .carousel-inner {
     width: 100%;
     height: 490px;
-    background-color: #111;
+    background: transparent;
     position: relative; /* Bootstrap maneja posicionamiento interno */
   }
   
@@ -43,28 +49,44 @@
     object-fit: contain;  /* muestra la imagen completa (letterbox si sobra espacio) */
     object-position: center;
     display: block;       /* permite margin: auto si fuera necesario */
-    border-radius: 12px;
-    background-color: #111;
-    transition: transform 0.4s ease;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel-item-content img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(114, 82, 255, 0.3);
   }
   
   /* Flechas personalizadas */
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(114, 82, 255, 0.5);
     border-radius: 50%;
     padding: 14px;
     background-size: 60% 60%;
     background-position: center;
     background-repeat: no-repeat;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    box-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
   .carousel-control-prev-icon:hover,
   .carousel-control-next-icon:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    box-shadow: 0 0 12px 4px rgba(0, 255, 255, 0.4);
+    background-color: rgba(114, 82, 255, 0.3);
+    border-color: rgba(114, 82, 255, 0.8);
+    box-shadow: 
+      0 6px 20px rgba(114, 82, 255, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 0 16px rgba(114, 82, 255, 0.4);
+    transform: scale(1.1);
   }
   
   /* Responsive: a ~900px reducimos la altura para evitar scroll vertical */

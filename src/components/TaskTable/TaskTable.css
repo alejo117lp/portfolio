@@ -3,16 +3,21 @@
     margin: 40px auto; /* Centrar vertical y horizontalmente */
     width: 100%;
     max-width: 1200px; /* Limitar ancho máximo */
-    background-color: #1C1C1C; /* Fondo oscuro para la tabla */
-    border-radius: 8px; /* Bordes redondeados */
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1.5px solid rgba(114, 82, 255, 0.5);
+    border-radius: 12px; /* Bordes redondeados */
     padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
   /* Encabezado de la tabla */
   .task-table h3 {
     text-align: center;
-    color: #FFC107; /* Amarillo que ya estás usando */
+    color: #7252ff; /* Violeta para mantener consistencia */
     font-size: 2rem;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 20px;
@@ -23,7 +28,7 @@
     width: 100%;
     border-collapse: collapse; /* Eliminar bordes dobles */
     text-align: left; /* Alineación izquierda para las celdas */
-    background-color: #2E2E38; /* Fondo para filas alternas */
+    background-color: transparent; /* Fondo transparente para que se vea el contenedor */
     border-radius: 8px; /* Bordes redondeados de las celdas */
     overflow: hidden; /* Asegurar que los bordes redondeados se apliquen */
   }
@@ -34,15 +39,15 @@
   
   /* Encabezado de la tabla */
   .table th {
-    background-color: #1b2a49; /* Fondo similar al header */
-    color: #dedede; /* Texto en blanco */
+    background-color: rgba(114, 82, 255, 0.15); /* Fondo violeta sutil */
+    color: #f9fafb; /* Texto en blanco */
     font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
     font-weight: bold;
     padding: 12px 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 2px solid #0078FF; /* Línea inferior */
+    border-bottom: 2px solid rgba(114, 82, 255, 0.6); /* Línea inferior violeta */
   }
   
   /* Celdas de la tabla */
@@ -50,18 +55,18 @@
     padding: 10px 15px;
     font-family: "Istok Web", serif;
     font-size: 1rem;
-    color: #b0b0b0;
-    border-bottom: 1px solid #2E2E38; /* Línea divisoria */
+    color: #e5e7eb;
+    border-bottom: 1px solid rgba(114, 82, 255, 0.2); /* Línea divisoria violeta sutil */
   }
   
   /* Estilo para filas alternas */
   .table tr:nth-child(even) {
-    background-color: #242424; /* Fondo más claro */
+    background-color: rgba(114, 82, 255, 0.05); /* Fondo violeta muy sutil */
   }
   
   /* Hover en filas */
   .table tr:hover {
-    background-color: #333333; /* Fondo más claro al pasar el mouse */
+    background-color: rgba(114, 82, 255, 0.15); /* Fondo violeta al pasar el mouse */
     transition: background-color 0.3s ease;
   }
   
@@ -69,7 +74,7 @@
   .table td:first-child {
     text-align: center; /* Centrar el número */
     font-weight: bold; /* Resaltar */
-    color: #FFC107; /* Amarillo destacado */
+    color: #7252ff; /* Violeta destacado */
   }
 
   .table>:not(caption)>*>*{

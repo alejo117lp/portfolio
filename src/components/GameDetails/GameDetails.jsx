@@ -2,12 +2,16 @@ import React from "react";
 import "../GameDetails/GameDetails.css";
 import Carousel from "../Carousel/Carousel";
 import TaskTable from "../TaskTable/TaskTable";
+import { RevealSection, RevealCard } from "../../hooks/useScrollReveal";
 
 const GameDetails = (props) => {
   return (
     <div className="principal-container">
-      <h1 className="featured mt-4 mb-4">{props.name}</h1>
-      <section className="game-summary mb-4">
+      <RevealSection className="intro-section mt-4" once={true}>
+        <h1 className="featured">{props.name}</h1>
+      </RevealSection>
+      <RevealCard delay={0}>
+        <section className="game-summary mb-4">
         <div className="video-container">
           <iframe
             className="game-trailer video-responsive"
@@ -29,9 +33,11 @@ const GameDetails = (props) => {
             Descargar
           </a>
         </div>
-      </section>
+        </section>
+      </RevealCard>
 
-      <section className="game-features">
+      <RevealCard delay={150}>
+        <section className="game-features">
         <div className="game-feature-items">
           <div className="game-feature-item">
             <p>
@@ -52,18 +58,23 @@ const GameDetails = (props) => {
             </p>
           </div>
         </div>
-      </section>
+        </section>
+      </RevealCard>
 
-      <TaskTable
-        tasks={props.tasks}
-        title="Tareas Desarrolladas:"
-        header1="N°"
-        header2="Tarea"
-      />
+      <RevealCard delay={300}>
+        <TaskTable
+          tasks={props.tasks}
+          title="Tareas Desarrolladas:"
+          header1="N°"
+          header2="Tarea"
+        />
+      </RevealCard>
 
-      <section className="gallery-section">
-        <Carousel images={props.images} />{" "}
-      </section>
+      <RevealCard delay={450}>
+        <section className="gallery-section">
+          <Carousel images={props.images} />{" "}
+        </section>
+      </RevealCard>
     </div>
   );
 };

@@ -1,97 +1,12 @@
 import React from "react";
 import "./Home.css";
 import Card from "../../components/Card/Card";
+import { RevealSection, RevealCard } from "../../hooks/useScrollReveal";
 import img1 from "../../assets/img/web_fua_intranet.jpg";
 import robotZ from "../../assets/img/Robot-Z.png";
 import mib from "../../assets/img/poster mib.jpeg";
 import GameCard from "../../components/GameCard/GameCard";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-
-/**
- * Hook sencillo para revelar elementos al hacer scroll usando IntersectionObserver.
- * Si en el futuro lo reutilizas en más pantallas, merece la pena extraerlo a un hook
- * compartido (por ejemplo `src/hooks/useScrollReveal.js`).
- */
-const useScrollReveal = ({
-  threshold = 0.15,
-  root = null,
-  rootMargin = "0px",
-  once = false, // Cambiado a false para que se reactive cada vez
-} = {}) => {
-  const ref = React.useRef(null);
-  const [isVisible, setIsVisible] = React.useState(false);
-
-  React.useEffect(() => {
-    const element = ref.current;
-
-    // Fallback en navegadores sin IntersectionObserver
-    if (!element || typeof IntersectionObserver === "undefined") {
-      setIsVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (once) {
-            observer.disconnect();
-          }
-        } else if (!once) {
-          setIsVisible(false);
-        }
-      },
-      { threshold, root, rootMargin }
-    );
-
-    observer.observe(element);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [threshold, root, rootMargin, once]);
-
-  return { ref, isVisible };
-};
-
-/**
- * Envuelve una sección existente y solo añade la animación de scroll.
- * Respeta las clases originales para no romper tu diseño.
- */
-const RevealSection = ({ id, className, children, once = false }) => {
-  const { ref, isVisible } = useScrollReveal({ once });
-
-  const composedClassName = [
-    className,
-    "reveal",
-    isVisible ? "reveal--visible" : "",
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-  return (
-    <section id={id} ref={ref} className={composedClassName}>
-      {children}
-    </section>
-  );
-};
-
-/**
- * Wrapper para cards individuales con animación stagger
- */
-const RevealCard = ({ children, delay = 0 }) => {
-  const { ref, isVisible } = useScrollReveal();
-
-  return (
-    <div
-      ref={ref}
-      className={`reveal-card ${isVisible ? "reveal-card--visible" : ""}`}
-      style={{ "--delay": `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-};
 
 const Home = () => {
   const frontendItems = [
