@@ -37,7 +37,8 @@ const Footer = () => {
           </div>
         </div>
         <p className="credits">
-          &copy;Creado por Alejandro López Pérez. Todos los derechos reservados.
+          <span>&copy; Creado por Alejandro López Pérez.</span> Todos los
+          derechos reservados.
         </p>
       </div>
     </footer>

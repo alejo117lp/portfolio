@@ -10,6 +10,7 @@ import "./BackgroundParticles.css";
 const BackgroundParticles = () => {
   const canvasRef = useRef(null);
   const animationRef = useRef(null);
+  const mouseRef = useRef({ x: null, y: null });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -29,7 +30,15 @@ const BackgroundParticles = () => {
 
     resize();
 
-    const PARTICLE_COUNT = Math.min(80, Math.floor((width * height) / 25000));
+    const handleMouseMove = (event) => {
+      mouseRef.current = { x: event.clientX, y: event.clientY };
+    };
+
+    const handleMouseLeave = () => {
+      mouseRef.current = { x: null, y: null };
+    };
+
+    const PARTICLE_COUNT = Math.min(100, Math.floor((width * height) / 25000));
 
     const createParticles = () => {
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
@@ -69,6 +78,25 @@ const BackgroundParticles = () => {
         p.x += p.vx;
         p.y += p.vy;
 
+        // Ligera reacción al ratón: las partículas se desplazan sutilmente
+        // alejándose del cursor cuando está cerca.
+        const mouse = mouseRef.current;
+        if (mouse.x !== null && mouse.y !== null) {
+          const dxm = p.x - mouse.x;
+          const dym = p.y - mouse.y;
+          const distMouseSq = dxm * dxm + dym * dym;
+          const influenceRadius = 180;
+
+          if (distMouseSq < influenceRadius * influenceRadius && distMouseSq > 0.01) {
+            const force = 0.12;
+            const distMouse = Math.sqrt(distMouseSq);
+            const fx = (dxm / distMouse) * force;
+            const fy = (dym / distMouse) * force;
+            p.x += fx;
+            p.y += fy;
+          }
+        }
+
         if (p.x < 0 || p.x > width) p.vx *= -1;
         if (p.y < 0 || p.y > height) p.vy *= -1;
 
@@ -104,12 +132,16 @@ const BackgroundParticles = () => {
 
     animationRef.current = requestAnimationFrame(draw);
     window.addEventListener("resize", resize);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener("resize", resize);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 

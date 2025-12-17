@@ -3,8 +3,11 @@ footer{
   width: 100%;
   padding: 20px 0;
   justify-content: center;
-  background-color: #121212; 
-  border-top: 3px solid #0078FF; 
+  background: radial-gradient(circle at top, #111827, #020617);
+  border-top: 2px solid rgba(114, 82, 255, 0.8);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 2;
 }
 
 .footer-container{
@@ -16,13 +19,17 @@ footer{
 
 .footer-container h4{
   text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #e5e7eb;
 }
 
 .contact-box{
   display: flex;
   justify-content: center;
-  gap: 45px;
-  margin:20px 0;
+  gap: 36px;
+  margin: 20px 0;
 }
 
 .footer-item{
@@ -32,35 +39,43 @@ footer{
 }
 
 .footer-item a{
-  color: #A0CFFF;
-  padding:5px;
+  color: #c7d2fe;
+  padding: 8px;
   text-decoration: none;
-  transition: color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0%, #1e293b, #020617);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.2s ease-out,
+    background 0.25s ease-out,
+    color 0.15s ease-out;
 }
 
 .footer-item i{
-  font-size: 50px;
-}
-
-.footer-item:hover{
-  color: #FFC107;
+  font-size: 40px;
 }
 
 .footer-item a:hover{
-  color: #FFC107;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #FFC107;
-  border-radius: 5px;
-  text-shadow: 0 0 15px rgba(255, 193, 7, 0.9);
+  transform: translateY(-2px) scale(1.05);
+  color: #ffffff;
+  background: radial-gradient(circle at 30% 0%, #7252ff, #5271ff);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+}
+
+.footer-item a:active{
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.85);
 }
 
 .credits{
   text-align: center;
   font-style: italic;
-  color: #A0A0A0;
-  font-size: 1rem;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-top: 8px;
 }
 
-.credits:hover{
-  color: #FFFFFF;
+.credits span{
+  color: #e5e7eb;
 }
