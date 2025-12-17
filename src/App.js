@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Header from './components/Header/Header';
+import BackgroundParticles from "./components/BackgroundParticles/BackgroundParticles";
 import TwoDGames from './pages/2d_games/TwoDGames';
 import ThreeDGames from './pages/3d_games/ThreeDGames';
 import VrMobGames from  './pages/VrMobGames/VrMobGames';
@@ -28,6 +29,7 @@ function App() {
   return (
     <Router basename="/portfolio">
       <div className="App">
+        <BackgroundParticles />
         <Header />
         <ScrollToTop />
           <Routes>

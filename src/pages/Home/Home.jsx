@@ -4,7 +4,6 @@ import Card from "../../components/Card/Card";
 import img1 from "../../assets/img/web_fua_intranet.jpg";
 import robotZ from "../../assets/img/Robot-Z.png";
 import mib from "../../assets/img/poster mib.jpeg";
-import logo from "../../assets/img/logo_1.png";
 import GameCard from "../../components/GameCard/GameCard";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
