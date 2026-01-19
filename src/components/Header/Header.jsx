@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/img/isotipo 3.png";
 import "./Header.css";
 
 const navItems = [
@@ -39,7 +40,9 @@ const Header = () => {
     >
       <div className="app-sidebar__logo">
         <Link to="/home" aria-label="Volver al inicio">
-          <span className="app-sidebar__logo-text">A</span>
+          <span className="app-sidebar__logo-text">
+            <img src={logo} alt="Alejo117Dev Logo" className="app-sidebar__logo-img" />
+          </span>
         </Link>
       </div>
 

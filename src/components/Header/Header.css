@@ -30,9 +30,6 @@ header a {
   backdrop-filter: blur(8px) saturate(180%);
   -webkit-backdrop-filter: blur(8px) saturate(180%);
   border: 1.5px solid rgba(114, 82, 255, 0.5);
-  color: #f9fafb;
-  font-weight: 700;
-  font-size: 1.1rem;
   box-shadow: 
     0 4px 16px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
@@ -40,6 +37,15 @@ header a {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  padding: 6px;
+}
+
+.app-sidebar__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.05);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .app-sidebar__logo-text::before {
@@ -59,6 +65,11 @@ header a {
     0 8px 24px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.15),
     0 0 20px rgba(114, 82, 255, 0.3);
+}
+
+.app-sidebar__logo-text:hover .app-sidebar__logo-img {
+  transform: scale(1.1);
+  filter: brightness(1.2) contrast(1.1);
 }
 
 .app-sidebar__logo-text:hover::before {
@@ -133,7 +144,7 @@ header a {
   .app-sidebar__logo-text {
     width: 32px;
     height: 32px;
-    font-size: 0.95rem;
+    padding: 4px;
   }
 
   .app-sidebar__nav {

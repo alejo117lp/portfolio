@@ -59,6 +59,55 @@
   gap: 1.5rem;
 }
 
+.profile-head {
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.hero-logo-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(114, 82, 255, 0.3));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: logoFloat 6s ease-in-out infinite;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05) translateY(-4px);
+  filter: drop-shadow(0 12px 32px rgba(114, 82, 255, 0.5));
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-text-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
 .profile-description {
   max-width: 600px;
   margin: 30px 0;
@@ -331,6 +380,29 @@
   }
 
   .profile-head {
+    text-align: left;
+    width: 100%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-logo {
+    max-width: 160px;
+  }
+
+  .hero-text-wrapper {
+    width: 100%;
     text-align: left;
   }
 

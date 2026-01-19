@@ -5,6 +5,7 @@ import { RevealSection, RevealCard } from "../../hooks/useScrollReveal";
 import img1 from "../../assets/img/web_fua_intranet.jpg";
 import robotZ from "../../assets/img/Robot-Z.png";
 import mib from "../../assets/img/poster mib.jpeg";
+import logoVertical from "../../assets/img/vertical 4.png";
 import GameCard from "../../components/GameCard/GameCard";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
@@ -42,17 +43,28 @@ const Home = () => {
         {/* Hero con texto grande tipo "Hi, I'm..." */}
         <RevealSection id="perfil" className="profile-section" once={true}>
           <div className="profile-head">
-            <h1 className="hero-title">
-              <span className="hero-title-small">Hola, soy</span>
-              <br />
-              <span className="hero-title-highlight gradient-text">
-                Alejo López,
-              </span>
-              <br />
-              <span className="hero-title-role">
-                Desarrollador Frontend y de Videojuegos Junior
-              </span>
-            </h1>
+            <div className="hero-content">
+              <div className="hero-text-wrapper">
+                <h1 className="hero-title">
+                  <span className="hero-title-small">Hola, soy</span>
+                  <br />
+                  <span className="hero-title-highlight gradient-text">
+                    Alejo López,
+                  </span>
+                  <br />
+                  <span className="hero-title-role">
+                    Desarrollador Frontend y de Videojuegos Junior
+                  </span>
+                </h1>
+              </div>
+              <div className="hero-logo-wrapper">
+                <img 
+                  src={logoVertical} 
+                  alt="Alejo López Logo" 
+                  className="hero-logo"
+                />
+              </div>
+            </div>
           </div>
           <div className="profile-description">
             <p>
