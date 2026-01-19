@@ -131,7 +131,7 @@ body {
 /* Laptop (992px - 1199px) */
 @media (width >= 992px) and (width <= 1199px) {
   .principal-container {
-    max-width: 1200px;
+  max-width: 1200px;
     padding: 20px 40px 20px 110px;
   }
 }

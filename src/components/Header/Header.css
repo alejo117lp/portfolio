@@ -116,21 +116,21 @@ header a {
 .app-sidebar__link--active {
   opacity: 1;
   color: var(--accent-color);
-}
+  }
 
 .app-sidebar__footer {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-muted);
-}
+  }
 
 .app-sidebar__initials {
   font-weight: 500;
-}
+  }
 
 .app-sidebar__toggle {
-  display: none;
+    display: none;
 }
 
 /* Responsive: convertir el sidebar en barra superior en móviles */
@@ -195,7 +195,7 @@ header a {
     cursor: pointer;
     transition: background 0.15s ease-out, transform 0.15s ease-out,
       box-shadow 0.15s ease-out;
-  }
+    }
 
   .app-sidebar__toggle:hover {
     background: var(--bg-glass-hover);
