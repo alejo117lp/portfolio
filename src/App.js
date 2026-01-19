@@ -29,7 +29,7 @@ import GestionContrataciones from './pages/GestionContrataciones/GestionContrata
 function App() {
   return (
     <ThemeProvider>
-      <Router basename="/portfolio">
+      <Router basename="">
         <div className="App">
           <BackgroundParticles />
           <Header />
