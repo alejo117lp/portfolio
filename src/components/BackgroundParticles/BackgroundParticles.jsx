@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useTheme } from "../../context/ThemeContext";
 import "./BackgroundParticles.css";
 
 /**
@@ -8,6 +9,7 @@ import "./BackgroundParticles.css";
  * a un hook compartido siguiendo tus reglas de reutilización.
  */
 const BackgroundParticles = () => {
+  const { theme } = useTheme();
   const canvasRef = useRef(null);
   const animationRef = useRef(null);
   const mouseRef = useRef({ x: null, y: null });
@@ -64,13 +66,19 @@ const BackgroundParticles = () => {
         height * 0.1,
         Math.max(width, height)
       );
-      gradient.addColorStop(0, "rgba(15, 23, 42, 0.6)");
-      gradient.addColorStop(1, "rgba(2, 6, 23, 0.9)");
+      if (theme === "dark") {
+        gradient.addColorStop(0, "rgba(15, 23, 42, 0.6)");
+        gradient.addColorStop(1, "rgba(2, 6, 23, 0.9)");
+      } else {
+        gradient.addColorStop(0, "rgba(248, 250, 252, 0.4)");
+        gradient.addColorStop(1, "rgba(241, 245, 249, 0.6)");
+      }
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
 
       // Actualizar y dibujar partículas
-      ctx.fillStyle = "rgba(114, 82, 255, 0.8)";
+      const particleOpacity = theme === "dark" ? 0.8 : 0.5;
+      ctx.fillStyle = `rgba(114, 82, 255, ${particleOpacity})`;
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
@@ -117,7 +125,8 @@ const BackgroundParticles = () => {
 
           if (distSq < maxDist * maxDist) {
             const alpha = 1 - distSq / (maxDist * maxDist);
-            ctx.strokeStyle = `rgba(114, 82, 255, ${alpha * 0.6})`;
+            const lineOpacity = theme === "dark" ? 0.6 : 0.3;
+            ctx.strokeStyle = `rgba(114, 82, 255, ${alpha * lineOpacity})`;
             ctx.lineWidth = 0.6;
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
@@ -143,7 +152,7 @@ const BackgroundParticles = () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas

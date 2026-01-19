@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/img/isotipo 3.png";
+// import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Header.css";
 
 const navItems = [
@@ -45,6 +46,10 @@ const Header = () => {
           </span>
         </Link>
       </div>
+
+      {/* <div className="app-sidebar__theme-toggle">
+        <ThemeToggle />
+      </div> */}
 
       <button
         type="button"

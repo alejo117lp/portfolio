@@ -175,15 +175,15 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: rgba(15, 23, 42, 0.4);
+  background: var(--bg-glass);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1.5px solid rgba(114, 82, 255, 0.5);
+  border: 1.5px solid var(--border-color-primary);
   border-radius: 12px;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 0 0 1px rgba(114, 82, 255, 0.2);
+    0 8px 32px var(--shadow-md),
+    inset 0 1px 0 var(--highlight-inset),
+    0 0 0 1px var(--border-glow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -195,7 +195,7 @@
   inset: 0;
   border-radius: inherit;
   padding: 1.5px;
-  background: linear-gradient(135deg, rgba(114, 82, 255, 0.6), rgba(82, 113, 255, 0.4), transparent);
+  background: linear-gradient(135deg, var(--accent-color), rgba(82, 113, 255, 0.6), transparent);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -206,12 +206,12 @@
 
 .skills-cards .card-container:hover {
   transform: scale(1.05) translateY(-2px);
-  border-color: rgba(114, 82, 255, 0.8);
-  background: rgba(15, 23, 42, 0.55);
+  border-color: var(--accent-color-hover);
+  background: var(--bg-glass-hover);
   box-shadow: 
-    0 16px 48px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    0 0 24px rgba(114, 82, 255, 0.4);
+    0 16px 48px var(--shadow-lg),
+    inset 0 1px 0 var(--highlight-inset-hover),
+    0 0 24px var(--accent-glow);
 }
 
 .skills-cards .card-container:hover::before {

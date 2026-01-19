@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import { ThemeProvider } from './context/ThemeContext';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Header from './components/Header/Header';
 import BackgroundParticles from "./components/BackgroundParticles/BackgroundParticles";
@@ -27,33 +28,35 @@ import GestionContrataciones from './pages/GestionContrataciones/GestionContrata
 
 function App() {
   return (
-    <Router basename="/portfolio">
-      <div className="App">
-        <BackgroundParticles />
-        <Header />
-        <ScrollToTop />
-          <Routes>
-            <Route path='/home' element={<Home />} />
-            <Route path='/' element={<Home />} />
-            <Route path='*' element={<Home />} />
-            <Route path='/2d-games' element={<TwoDGames />} />
-            <Route path='/3d-games' element={<ThreeDGames />} />
-            <Route path='/frontend-pj' element={<Frontend />} />
-            <Route path='/vr-mob-games' element={<VrMobGames />} />
-            <Route path='/delivery-journey' element={<DeliveryJourney />} />
-            <Route path='/harmony-master' element={<HarmonyMaster />} />
-            <Route path='/mib-museum' element={<MenInBlackMuseum />} />
-            <Route path='/robot-z' element={<RobotZ />} />
-            <Route path='/tank-war' element={<TankWar />} />
-            <Route path='/the-last-jump' element={<TheLastJump />} />
-            <Route path='/tinac' element={<ThisIsNotAChildhood />} />
-            <Route path='/portal-empleados' element={<PortalEmpleados />} />
-            <Route path='/asistencia-eventos' element={<AsistenciaEventos />} />
-            <Route path='/app-contrataciones' element={<GestionContrataciones />} />
-          </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router basename="/portfolio">
+        <div className="App">
+          <BackgroundParticles />
+          <Header />
+          <ScrollToTop />
+            <Routes>
+              <Route path='/home' element={<Home />} />
+              <Route path='/' element={<Home />} />
+              <Route path='*' element={<Home />} />
+              <Route path='/2d-games' element={<TwoDGames />} />
+              <Route path='/3d-games' element={<ThreeDGames />} />
+              <Route path='/frontend-pj' element={<Frontend />} />
+              <Route path='/vr-mob-games' element={<VrMobGames />} />
+              <Route path='/delivery-journey' element={<DeliveryJourney />} />
+              <Route path='/harmony-master' element={<HarmonyMaster />} />
+              <Route path='/mib-museum' element={<MenInBlackMuseum />} />
+              <Route path='/robot-z' element={<RobotZ />} />
+              <Route path='/tank-war' element={<TankWar />} />
+              <Route path='/the-last-jump' element={<TheLastJump />} />
+              <Route path='/tinac' element={<ThisIsNotAChildhood />} />
+              <Route path='/portal-empleados' element={<PortalEmpleados />} />
+              <Route path='/asistencia-eventos' element={<AsistenciaEventos />} />
+              <Route path='/app-contrataciones' element={<GestionContrataciones />} />
+            </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
