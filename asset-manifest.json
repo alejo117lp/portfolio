@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.5543122b.css",
-    "main.js": "./static/js/main.2d70db81.js",
+    "main.js": "./static/js/main.c9b41890.js",
     "static/media/TINAC_1.png": "./static/media/TINAC_1.e919ef5250fa956bcc77.png",
     "static/media/tanks_02.png": "./static/media/tanks_02.b078c3c4311d594e6955.png",
     "static/media/tanks_03.png": "./static/media/tanks_03.7c507af3de8d4b694929.png",
@@ -51,10 +51,10 @@
     "static/media/web_fua_asistencias.jpg": "./static/media/web_fua_asistencias.8457f4a0a98f07639904.jpg",
     "index.html": "./index.html",
     "main.5543122b.css.map": "./static/css/main.5543122b.css.map",
-    "main.2d70db81.js.map": "./static/js/main.2d70db81.js.map"
+    "main.c9b41890.js.map": "./static/js/main.c9b41890.js.map"
   },
   "entrypoints": [
     "static/css/main.5543122b.css",
-    "static/js/main.2d70db81.js"
+    "static/js/main.c9b41890.js"
   ]
 }
