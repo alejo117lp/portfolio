@@ -19,9 +19,8 @@ const Home = () => {
   ];
 
   const backendItems = [
-    { iconName: "fa-brands fa-python", description: "python" },
+    { iconName: "fa-brands fa-python", description: "Python" },
     { iconName: "fa-solid fa-code", description: "Django" },
-    { iconName: "fa-brands fa-node-js", description: "Node.js" },
   ];
 
   const gamesItems = [
@@ -31,6 +30,7 @@ const Home = () => {
 
   const otherItems = [
     { iconName: "fa-brands fa-github", description: "Git/GitHub" },
+    { iconName: "fa-solid fa-cloud", description: "Microsoft Azure" },
     { iconName: "fa-brands fa-google", description: "Google Apps Script" },
     { iconName: "fa-brands fa-microsoft", description: "Microsoft 365" },
     { iconName: "fa-brands fa-figma", description: "Figma" },
@@ -109,11 +109,11 @@ const Home = () => {
               alt="Portal de empleados"
           description={
             <p>
-                  Aplicación Web conectada al ERP y desarrollada en{" "}
-                  <span className="highlight">React</span> para reemplazar la
-                  antigua intranet de la empresa. Permite a los empleados gestionar
-                  su información personal, consultar colillas de pago, firmar
-                  documentos digitales y administrar turnos y vacaciones.
+                Aplicación Web conectada al ERP y desarrollada en{" "}
+                <span className="highlight">React</span> para reemplazar la
+                antigua intranet de la empresa. Permite a los empleados gestionar
+                su información personal, consultar colillas de pago, firmar
+                documentos digitales y administrar turnos y vacaciones.
             </p>
           }
           navigate="/portal-empleados"
