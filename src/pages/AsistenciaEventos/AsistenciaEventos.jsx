@@ -1,10 +1,9 @@
-import React from "react";
 import FrontendDetails from "../../components/FrontendDetails/FrontendDetails";
-import img1 from "../../assets/img/Asistencias_01.png";
-import img2 from "../../assets/img/Asistencias_02.png";
-import img3 from "../../assets/img/Asistencias_03.png";
-import img4 from "../../assets/img/Asistencias_04.png";
-import img5 from "../../assets/img/Asistencias_05.png";
+import img1 from "../../assets/img/asistencias 01.png";
+import img2 from "../../assets/img/asistencias 02.png";
+import img3 from "../../assets/img/asistencias 03.png";
+import img4 from "../../assets/img/asistencias 04.png";
+import img5 from "../../assets/img/asistencias 05.png";
 
 const AsistenciaEventos = () => {
   return (

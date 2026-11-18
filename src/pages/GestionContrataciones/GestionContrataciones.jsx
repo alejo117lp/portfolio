@@ -1,9 +1,8 @@
-import React from "react";
 import FrontendDetails from "../../components/FrontendDetails/FrontendDetails";
-import img1 from "../../assets/img/Contrataciones_01.png";
-import img2 from "../../assets/img/Contrataciones_02.png";
-import img3 from "../../assets/img/Contrataciones_03.png";
-import img4 from "../../assets/img/Contrataciones_04.png";
+import img1 from "../../assets/img/contrataciones 01.png";
+import img2 from "../../assets/img/contrataciones 02.png";
+import img3 from "../../assets/img/contrataciones 03.png";
+import img4 from "../../assets/img/contrataciones 04.png";
 
 const GestionContrataciones = () => {
   return (
@@ -16,24 +15,25 @@ const GestionContrataciones = () => {
             <strong>Fundación Universidad de Antioquia</strong>, optimiza cada
             fase del proceso de contrataciones. A través de una interfaz
             intuitiva, los usuarios pueden:
+            <ul>
+              <li>Iniciar y dar seguimiento a solicitudes de contratación.</li>
+              <li>
+                Revisar de forma centralizada documentos y datos personales.
+              </li>
+              <li>
+                Coordinar la participación de Gestión Humana, SST y Jurídica
+                en el flujo completo.
+              </li>
+            </ul>
             <br />
-            <br />
-              ⭐ Iniciar y dar seguimiento a solicitudes de contratación.  
-            <br />
-            <br />   
-              ⭐ Revisar de forma centralizada documentos y datos personales.
-            <br />
-            <br />
-              ⭐ Coordinar la participación de Gestión Humana, SST y Jurídica en
-              el flujo completo.
-            <br />
-            <br />
-            Mi responsabilidad incluyó el diseño y desarrollo del frontend con
-            <span className="highlight"> React</span> y{" "}
-            <span className="highlight">Node.js</span>, asegurando una{" "}
+            Mi responsabilidad en la primera fase incluyó el diseño y desarrollo del frontend con
+            <span className="highlight"> React</span> y{" "} asegurando una{" "}
             <span className="highlight">
               experiencia de usuario fluida, accesible y totalmente responsiva
             </span>
+            <br />
+            <br />
+            Para la segunda fase, desarrollé el backend con <span className="highlight">Django</span>, integrando la aplicación con el sistema de gestión de la Fundación y garantizando la seguridad y eficiencia en el manejo de datos.
           </>
         }
         images={[
@@ -44,8 +44,8 @@ const GestionContrataciones = () => {
         ]}
         tasks={[
           "Diseño de Interfaz de Usuario",
-          "Implementación de Funcionalidades",
-          "Integración con Backend",
+          "Implementación de Frontend con React",
+          "Integración y desarrollo de Backend con Django",
           "Pruebas y Depuración",
         ]}
       />

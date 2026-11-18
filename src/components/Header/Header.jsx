@@ -6,7 +6,7 @@ import "./Header.css";
 
 const navItems = [
   { to: "/home", label: "Inicio", icon: "fa-solid fa-house" },
-  { to: "/frontend-pj", label: "Frontend", icon: "fa-solid fa-laptop-code" },
+  { to: "/frontend-pj", label: "Web Apps", icon: "fa-solid fa-laptop-code" },
   { to: "/2d-games", label: "Juegos 2D", icon: "fa-solid fa-gamepad" },
   { to: "/3d-games", label: "Juegos 3D", icon: "fa-solid fa-cube" },
   {

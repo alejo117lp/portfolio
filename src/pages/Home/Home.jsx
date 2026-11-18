@@ -2,7 +2,8 @@ import React from "react";
 import "./Home.css";
 import Card from "../../components/Card/Card";
 import { RevealSection, RevealCard } from "../../hooks/useScrollReveal";
-import img1 from "../../assets/img/web_fua_intranet.jpg";
+import img1 from "../../assets/img/portal 01.png";
+import gestionTurnosCover from "../../assets/img/gt 03.png";
 import robotZ from "../../assets/img/Robot-Z.png";
 import mib from "../../assets/img/poster mib.jpeg";
 import logoVertical from "../../assets/img/vertical 4.png";
@@ -26,6 +27,12 @@ const Home = () => {
   const gamesItems = [
     { iconName: "fa-solid fa-code", description: "C#" },
     { iconName: "fa-brands fa-unity", description: "Unity" },
+  ];
+
+  const aiItems = [
+    { iconName: "fa-solid fa-wand-magic-sparkles", description: "Claude Code" },
+    { iconName: "fa-solid fa-terminal", description: "Codex" },
+    { iconName: "fa-solid fa-arrow-pointer", description: "Cursor" },
   ];
 
   const otherItems = [
@@ -53,7 +60,7 @@ const Home = () => {
                   </span>
                   <br />
                   <span className="hero-title-role">
-                    Desarrollador Frontend y de Videojuegos Junior
+                    Desarrollador Web y de Videojuegos
                   </span>
                 </h1>
               </div>
@@ -68,9 +75,13 @@ const Home = () => {
         </div>
         <div className="profile-description">
           <p>
-            Ingeniero en Diseño de Entretenimiento Digital con énfasis en
-              <span className="highlight"> videojuegos</span> y experiencia en{" "}
-              <span className="highlight">desarrollo web frontend</span>.
+            Como Ingeniero en Diseño de Entretenimiento Digital, creo{" "}
+            <span className="highlight">plataformas web fullstack</span> de alto
+            rendimiento y potencio mi desarrollo con{" "}
+            <span className="highlight">IA</span>, usando herramientas como
+            Codex y Claude Code para integrar arquitectura moderna,{" "}
+            <span className="highlight">videojuegos</span> y simulaciones
+            interactivas.
           </p>
         </div>
         </RevealSection>
@@ -90,6 +101,9 @@ const Home = () => {
           <Card title="Videojuegos" items={gamesItems} />
             </RevealCard>
             <RevealCard delay={300}>
+          <Card title="IA" items={aiItems} />
+            </RevealCard>
+            <RevealCard delay={400}>
           <Card title="Otros" items={otherItems} />
             </RevealCard>
           </div>
@@ -100,7 +114,7 @@ const Home = () => {
 
         {/* Proyectos Frontend destacados */}
         <RevealSection id="proyectos-web" className="section-wrapper">
-        <h3 className="featured-2">Proyectos Front-End Destacados</h3>
+        <h3 className="featured-2">Desarrollos Web Destacados</h3>
           <div className="web-projects-section">
           <RevealCard delay={150}>
         <ProjectCard 
@@ -117,6 +131,24 @@ const Home = () => {
             </p>
           }
           navigate="/portal-empleados"
+        />
+          </RevealCard>
+          <RevealCard delay={300}>
+        <ProjectCard
+          title="Gestión de Turnos"
+          src={gestionTurnosCover}
+          alt="Módulo de Verificación de Gestión de Turnos"
+          description={
+            <p>
+              Plataforma <span className="highlight">Django</span> diseñada
+              para el personal de conducción del Metro de Medellín, orientada
+              a gestionar turnos, novedades y solicitudes operativas. Mi
+              aporte se centró en restaurar la UI, desarrollar el módulo de{" "}
+              <span className="highlight">Verificación</span> y optimizar
+              flujos críticos del sistema.
+            </p>
+          }
+          navigate="/gestion-turnos"
         />
           </RevealCard>
           </div>

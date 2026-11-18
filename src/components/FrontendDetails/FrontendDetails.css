@@ -22,5 +22,14 @@
     text-align: justify;
     color: #e5e7eb;
 }
+
+.front-pj-description ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.front-pj-description li + li {
+  margin-top: 0.75rem;
+}
   
   

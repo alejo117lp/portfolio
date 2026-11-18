@@ -24,6 +24,7 @@ import ThisIsNotAChildhood from './pages/Games/ThisIsNotAChildhood';
 import PortalEmpleados from './pages/PortalEmpleados/PortalEmpleados';
 import AsistenciaEventos from './pages/AsistenciaEventos/AsistenciaEventos';
 import GestionContrataciones from './pages/GestionContrataciones/GestionContrataciones';
+import GestionTurnos from './pages/GestionTurnos/GestionTurnos';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
               <Route path='/portal-empleados' element={<PortalEmpleados />} />
               <Route path='/asistencia-eventos' element={<AsistenciaEventos />} />
               <Route path='/app-contrataciones' element={<GestionContrataciones />} />
+              <Route path='/gestion-turnos' element={<GestionTurnos />} />
             </Routes>
           <Footer />
         </div>

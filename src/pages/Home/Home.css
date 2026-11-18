@@ -145,7 +145,7 @@
 /* SKILLS SECTION */
 .skills-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   padding: 0 1rem;
   margin: 50px 0 15px 0;

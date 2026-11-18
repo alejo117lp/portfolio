@@ -11,7 +11,7 @@ const FrontendDetails = (props) => {
       </RevealSection>
       <RevealCard delay={0}>
         <div className="info-container">
-          <p className="front-pj-description">{props.description}</p>
+          <div className="front-pj-description">{props.description}</div>
         </div>
       </RevealCard>
 
